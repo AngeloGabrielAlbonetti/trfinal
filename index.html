@@ -11,12 +11,687 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <link rel="stylesheet" href="ovo.css">
 </head>
+<script type="text/babel" src="js.jsx"></script>
 
 <body>
+    <div id="vis"></div>
+    <div class="navbar-container">
 
-    <div id="root"></div>
+        <a href="#" class="navbar-logo">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="#FF6B00"/>
+                        <path d="M8 24V14l8-6 8 6v10H20v-6h-8v6H8z" fill="white"/>
+                        <rect x="13" y="20" width="6" height="4" rx="1" fill="#FF6B00"/>
+                    </svg>
+        </a>
+        <ul class="navbar-menu">
+            <li><a href="#problema">O Problema</a></li>
+            <li><a href="#solucao">A Solução</a></li>
+            <li><a href="#funcionalidades">Funcionalidades</a></li>
+            <li><a href="#publico">Público</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="#solucao" class="btn-nav-outline">Saiba mais</a>
+            <a href="#nda" class="btn-nav-primary" onclick="fordoar()"> Comece agora </a>
+            <div id="ro"></div>
 
-    <script type="text/babel" src="js.jsx"></script>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+    </div>
+    <!-- fim nav -->
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#problema">O Problema</a></li>
+            <li><a href="#solucao">A Solução</a></li>
+            <li><a href="#funcionalidades">Funcionalidades</a></li>
+            <li><a href="#publico">Público</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+        </ul>
+        <a href="#nda" class="btn-nav-primary mobile-cta" onclick="fordoar()">Comece agora</a>
+    </div>
+    </nav>
+    <section class="hero" id="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <div id="root">
+                    <span class="badge-dot"></span> Startup · Construção Civil
+                </div>
+                <h1 class="hero-title">
+                    Aqui Sonhos<br>
+                    <span class="hero-title-accent">se Tornam</span><br> Concretos.
+                </h1>
+
+                <p class="hero-sub">
+                    O <strong>Ponto do Construtor</strong> conecta pedreiros e profissionais da construção civil a clientes e construtoras — de forma simples, rápida e confiável.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#solucao" class="btn-primary">Descobrir a plataforma</a>
+                    <a href="#funcionalidades" class="btn-ghost">Ver funcionalidades →</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">3x</span>
+                        <span class="stat-label">Mais rápido que RH tradicional</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Focado em construção civil</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number">Alta</span>
+                        <span class="stat-label">Escalabilidade urbana</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="app-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-dot red"></div>
+                        <div class="mockup-dot yellow"></div>
+                        <div class="mockup-dot green"></div>
+                        <span class="mockup-title">Ponto do Construtor</span>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="mockup-search">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="#999" stroke-width="1.5"/><path d="M11 11l2.5 2.5" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            <span>Buscar profissionais...</span>
+                        </div>
+                        <div class="mockup-cards">
+                            <div class="pro-card">
+                                <div class="pro-avatar" style="background:#FF8C42;">JS</div>
+                                <div class="pro-info">
+                                    <span class="pro-name">João Silva</span>
+                                    <span class="pro-role">Pedreiro · Alvenaria</span>
+                                    <div class="pro-stars">★★★★★ <small>5.0</small></div>
+                                </div>
+                                <span class="pro-badge available">Disponível</span>
+                            </div>
+                            <div class="pro-card">
+                                <div class="pro-avatar" style="background:#4ECDC4;">MR</div>
+                                <div class="pro-info">
+                                    <span class="pro-name">Maria Rocha</span>
+                                    <span class="pro-role">Pintora · Acabamentos</span>
+                                    <div class="pro-stars">★★★★☆ <small>4.8</small></div>
+                                </div>
+                                <span class="pro-badge available">Disponível</span>
+                            </div>
+                            <div class="pro-card">
+                                <div class="pro-avatar" style="background:#A78BFA;">CL</div>
+                                <div class="pro-info">
+                                    <span class="pro-name">Carlos Lima</span>
+                                    <span class="pro-role">Eletricista</span>
+                                    <div class="pro-stars">★★★★★ <small>4.9</small></div>
+                                </div>
+                                <span class="pro-badge busy">Em serviço</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- cards flutuantes -->
+                <div class="float-card float-top-right">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.4 5h5.6l-4.5 3.3 1.7 5.2L10 12.3l-5.2 3.2 1.7-5.2L2 7h5.6L10 2z" fill="#FF6B00"/></svg>
+                    <div>
+                        <div class="float-title">Novo serviço fechado!</div>
+                        <div class="float-sub">Reforma em São Paulo · R$1.200</div>
+                    </div>
+                </div>
+
+                <div class="float-card float-bottom-left">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#22C55E" stroke-width="2"/><path d="M6 10l3 3 5-5" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="float-title">Avaliação recebida</div>
+                        <div class="float-sub">★★★★★ Excelente trabalho!</div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- problema -->
+    <section class="section-problema" id="problema">
+        <div class="section-container">
+            <div class="section-tag">O Problema</div>
+            <h2 class="section-title">
+                A falta de mão de obra qualificada<br>
+                <em>paralisa o Brasil</em>
+            </h2>
+            <p class="section-desc">
+                A construção civil brasileira enfrenta uma crise silenciosa — e todo mundo sofre.
+            </p>
+
+            <div class="problema-grid">
+                <div class="problema-card card-orange">
+                    <svg class="problema-illustration" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="60" cy="30" r="18" fill="rgba(255,255,255,0.2)"/>
+                        <circle cx="60" cy="30" r="12" fill="rgba(255,255,255,0.4)"/>
+                        <path d="M40 70 Q60 55 80 70" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none"/>
+                        <path d="M30 85 Q60 72 90 85" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none"/>
+                        <circle cx="54" cy="28" r="2" fill="white"/>
+                        <circle cx="66" cy="28" r="2" fill="white"/>
+                        <path d="M55 35 Q60 32 65 35" stroke="white" stroke-width="1.5" fill="none"/>
+                        <path d="M15 45 L35 45 M85 45 L105 45" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                    </svg>
+                    <h3>Para Clientes</h3>
+                    <p>Pessoas que precisam de alguém para realizar pequenos serviços não sabem onde encontrar profissionais confiáveis.</p>
+                </div>
+
+                <div class="problema-card card-dark">
+                    <svg class="problema-illustration" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="40" width="80" height="50" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+                        <rect x="30" y="50" width="15" height="15" rx="2" fill="rgba(255,255,255,0.1)"/>
+                        <rect x="52" y="50" width="15" height="15" rx="2" fill="rgba(255,255,255,0.1)"/>
+                        <rect x="75" y="50" width="15" height="15" rx="2" fill="rgba(255,255,255,0.1)"/>
+                        <rect x="45" y="72" width="30" height="18" rx="2" fill="rgba(255,255,255,0.1)"/>
+                        <polygon cx="60" cy="10" points="60,8 72,28 48,28" fill="none" stroke="#FF6B00" stroke-width="2"/>
+                        <path d="M60,8 L72,28 L48,28 Z" stroke="#FF6B00" stroke-width="2" fill="rgba(255,107,0,0.2)"/>
+                        <text x="58" y="22" fill="#FF6B00" font-size="10" font-weight="bold">!</text>
+                    </svg>
+                    <h3>Para Construtoras</h3>
+                    <p>Empresas enfrentam enorme dificuldade para encontrar mão de obra qualificada e completar seus projetos no prazo.</p>
+                </div>
+
+                <div class="problema-card card-light">
+                    <div class="impacto-list">
+                        <div class="impacto-item">
+                            <span class="impacto-num">01</span>
+                            <div>
+                                <strong>Problemas estruturais</strong>
+                                <p>Falta de manutenção expõe construções a riscos sérios</p>
+                            </div>
+                        </div>
+                        <div class="impacto-item">
+                            <span class="impacto-num">02</span>
+                            <div>
+                                <strong>Atraso nas obras</strong>
+                                <p>Projetos sem mão de obra suficiente atrasam entregas</p>
+                            </div>
+                        </div>
+                        <div class="impacto-item">
+                            <span class="impacto-num">03</span>
+                            <div>
+                                <strong>Prejuízo econômico</strong>
+                                <p>Custos extras e perda de negócios para todos os lados</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  SOLUÇÃO  -->
+    <section class="section-solucao" id="solucao">
+        <div class="section-container">
+            <div class="solucao-split">
+                <div class="solucao-visual">
+                    <!-- Connection diagram SVG -->
+                    <svg class="conexao-svg" viewBox="0 0 360 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Center hub -->
+                        <circle cx="180" cy="160" r="55" fill="#FF6B00" opacity="0.12"/>
+                        <circle cx="180" cy="160" r="42" fill="#FF6B00" opacity="0.18"/>
+                        <circle cx="180" cy="160" r="30" fill="#FF6B00"/>
+                        <!-- Center icon (house/building) -->
+                        <path d="M170 160v8h20v-8l-10-8-10 8z" fill="white"/>
+                        <rect x="175" y="163" width="5" height="5" rx="1" fill="#FF6B00"/>
+                        <rect x="181" y="163" width="5" height="5" rx="1" fill="#FF6B00"/>
+
+                        <!-- Connecting lines -->
+                        <line x1="180" y1="118" x2="180" y2="75" stroke="#FF6B00" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+                        <line x1="148" y1="183" x2="105" y2="252" stroke="#FF6B00" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+                        <line x1="212" y1="183" x2="255" y2="252" stroke="#FF6B00" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+
+                        <!-- Pedreiro node -->
+                        <circle cx="180" cy="55" r="28" fill="#1A1A2E"/>
+                        <circle cx="180" cy="55" r="28" stroke="#FF6B00" stroke-width="1.5" opacity="0.5"/>
+                        <circle cx="180" cy="46" r="8" fill="#FF6B00" opacity="0.8"/>
+                        <path d="M165 68 Q180 60 195 68" stroke="#FF6B00" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <text x="180" y="94" text-anchor="middle" fill="#888" font-size="11" font-family="DM Sans">Pedreiros</text>
+
+                        <!-- Cliente node -->
+                        <circle cx="90" cy="270" r="28" fill="#1A1A2E"/>
+                        <circle cx="90" cy="270" r="28" stroke="#4ECDC4" stroke-width="1.5" opacity="0.5"/>
+                        <circle cx="90" cy="261" r="8" fill="#4ECDC4" opacity="0.8"/>
+                        <path d="M75 283 Q90 275 105 283" stroke="#4ECDC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <text x="90" y="308" text-anchor="middle" fill="#888" font-size="11" font-family="DM Sans">Clientes</text>
+
+                        <!-- Construtora node -->
+                        <circle cx="270" cy="270" r="28" fill="#1A1A2E"/>
+                        <circle cx="270" cy="270" r="28" stroke="#A78BFA" stroke-width="1.5" opacity="0.5"/>
+                        <rect x="258" y="258" width="24" height="20" rx="2" fill="none" stroke="#A78BFA" stroke-width="1.5" opacity="0.8"/>
+                        <rect x="262" y="262" width="5" height="5" rx="1" fill="#A78BFA" opacity="0.6"/>
+                        <rect x="273" y="262" width="5" height="5" rx="1" fill="#A78BFA" opacity="0.6"/>
+                        <text x="270" y="308" text-anchor="middle" fill="#888" font-size="11" font-family="DM Sans">Construtoras</text>
+
+                        <!-- Animated dots on lines -->
+                        <circle r="4" fill="#FF6B00">
+                            <animateMotion dur="2s" repeatCount="indefinite" path="M180,118 L180,75"/>
+                        </circle>
+                        <circle r="4" fill="#4ECDC4">
+                            <animateMotion dur="2.5s" repeatCount="indefinite" path="M148,183 L105,252"/>
+                        </circle>
+                        <circle r="4" fill="#A78BFA">
+                            <animateMotion dur="3s" repeatCount="indefinite" path="M212,183 L255,252"/>
+                        </circle>
+                    </svg>
+                </div>
+
+                <div class="solucao-content">
+                    <div class="section-tag">A Solução</div>
+                    <h2 class="section-title left">
+                        Uma plataforma que<br>
+                        <span class="text-orange">conecta quem precisa</span><br> a quem faz acontecer.
+                    </h2>
+                    <p class="section-desc left">
+                        O <strong>Ponto do Construtor</strong> é a ponte entre pedreiros e profissionais da construção civil — e os clientes e construtoras que precisam deles. Rápido, seguro e eficiente.
+                    </p>
+                    <a href="#funcionalidades" class="btn-primary">Ver funcionalidades</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FUNCIONALIDADES -->
+    <section class="section-features" id="funcionalidades">
+        <div class="section-container">
+            <div class="section-tag center">Funcionalidades</div>
+            <h2 class="section-title center">Tudo que você precisa,<br><em>em um só lugar</em></h2>
+
+            <div class="features-grid">
+                <div class="feature-card feature-large">
+                    <!-- Cadastro ilustração -->
+                    <svg class="feature-svg" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="30" y="20" width="140" height="110" rx="12" fill="rgba(255,107,0,0.06)" stroke="rgba(255,107,0,0.2)" stroke-width="1.5"/>
+                        <circle cx="100" cy="55" r="20" fill="rgba(255,107,0,0.15)"/>
+                        <circle cx="100" cy="55" r="14" fill="#FF6B00" opacity="0.7"/>
+                        <path d="M93 55l5 5 9-9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="50" y="87" width="100" height="8" rx="4" fill="rgba(255,107,0,0.15)"/>
+                        <rect x="65" y="103" width="70" height="8" rx="4" fill="rgba(255,107,0,0.08)"/>
+                    </svg>
+                    <div class="feature-icon orange">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2C6 2 2 6 2 11s4 9 9 9 9-4 9-9-4-9-9-9zm0 4a3 3 0 110 6 3 3 0 010-6zm0 10a7 7 0 01-5.4-2.5C6.4 12 8.6 11 11 11s4.6 1 5.4 2.5A7 7 0 0111 16z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Cadastro Rápido</h3>
+                    <p>Registro simples para pedreiros e contratantes. Crie seu perfil em minutos e comece a trabalhar ou contratar.</p>
+                </div>
+
+                <div class="feature-card">
+                    <!-- Feed ilustração -->
+                    <svg class="feature-svg small" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="15" width="160" height="35" rx="8" fill="rgba(78,205,196,0.1)" stroke="rgba(78,205,196,0.2)"/>
+                        <circle cx="40" cy="32" r="10" fill="rgba(78,205,196,0.3)"/>
+                        <rect x="56" y="24" width="60" height="6" rx="3" fill="rgba(78,205,196,0.3)"/>
+                        <rect x="56" y="34" width="40" height="5" rx="2" fill="rgba(78,205,196,0.15)"/>
+                        <rect x="20" y="58" width="160" height="35" rx="8" fill="rgba(78,205,196,0.06)" stroke="rgba(78,205,196,0.1)"/>
+                        <circle cx="40" cy="75" r="10" fill="rgba(78,205,196,0.15)"/>
+                        <rect x="56" y="67" width="70" height="6" rx="3" fill="rgba(78,205,196,0.15)"/>
+                        <rect x="56" y="77" width="45" height="5" rx="2" fill="rgba(78,205,196,0.1)"/>
+                    </svg>
+                    <div class="feature-icon teal">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="3" width="18" height="4" rx="2" fill="currentColor"/><rect x="2" y="9" width="18" height="4" rx="2" fill="currentColor" opacity="0.7"/><rect x="2" y="15" width="18" height="4" rx="2" fill="currentColor" opacity="0.4"/></svg>
+                    </div>
+                    <h3>Feed de Profissionais</h3>
+                    <p>Lista de profissionais disponíveis com foto, especialidade e avaliações para você escolher com confiança.</p>
+                </div>
+
+                <div class="feature-card">
+                    <!-- Chat ilustração -->
+                    <svg class="feature-svg small" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="15" y="20" width="110" height="35" rx="10" rx="10" fill="rgba(167,139,250,0.15)" stroke="rgba(167,139,250,0.3)"/>
+                        <rect x="25" y="30" width="70" height="6" rx="3" fill="rgba(167,139,250,0.4)"/>
+                        <rect x="25" y="40" width="50" height="5" rx="2" fill="rgba(167,139,250,0.2)"/>
+                        <rect x="75" y="65" width="110" height="35" rx="10" fill="rgba(255,107,0,0.1)" stroke="rgba(255,107,0,0.3)"/>
+                        <rect x="85" y="75" width="65" height="6" rx="3" fill="rgba(255,107,0,0.4)"/>
+                        <rect x="85" y="85" width="45" height="5" rx="2" fill="rgba(255,107,0,0.2)"/>
+                    </svg>
+                    <div class="feature-icon purple">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M20 2H4a2 2 0 00-2 2v12a2 2 0 002 2h14l4 4V4a2 2 0 00-2-2z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Chat Direto</h3>
+                    <p>Comunicação direta entre profissionais e contratantes para alinhar detalhes e fechar contratos sem burocracia.</p>
+                </div>
+
+                <div class="feature-card feature-wide">
+                    <!-- Avaliação ilustração -->
+                    <svg class="feature-svg small" viewBox="0 0 280 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <text x="30" y="55" font-size="28" fill="#FF6B00">★</text>
+                            <text x="72" y="55" font-size="28" fill="#FF6B00">★</text>
+                            <text x="114" y="55" font-size="28" fill="#FF6B00">★</text>
+                            <text x="156" y="55" font-size="28" fill="#FF6B00">★</text>
+                            <text x="198" y="55" font-size="28" fill="rgba(255,107,0,0.3)">★</text>
+                        </g>
+                        <rect x="30" y="68" width="180" height="8" rx="4" fill="rgba(255,107,0,0.15)"/>
+                        <rect x="30" y="82" width="120" height="6" rx="3" fill="rgba(255,107,0,0.08)"/>
+                    </svg>
+                    <div class="feature-icon orange">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 4.8 21l1.2-6.8-5-4.9 6.9-1L12 2z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Sistema de Avaliação</h3>
+                    <p>Após cada serviço, contratantes e profissionais se avaliam mutuamente. Notas e comentários constroem reputação e transparência no marketplace.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  diferenciais  -->
+    <section class="section-diff" id="diferenciais">
+        <div class="section-container">
+            <div class="section-tag center">Diferenciais</div>
+            <h2 class="section-title center">Por que o <span class="text-orange">Ponto do Construtor</span><br>é diferente?</h2>
+
+            <div class="diff-table-wrapper">
+                <table class="diff-table">
+                    <thead>
+                        <tr>
+                            <th class="th-feature">Funcionalidade</th>
+                            <th>LinkedIn</th>
+                            <th>RH Tradicional</th>
+                            <th class="th-highlight">Ponto do Construtor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Foco em construção civil</td>
+                            <td class="no">✗</td>
+                            <td class="partial">Parcial</td>
+                            <td class="yes highlight-col">✔ Sim</td>
+                        </tr>
+                        <tr>
+                            <td>Rapidez na contratação</td>
+                            <td class="no">✗</td>
+                            <td class="no">✗</td>
+                            <td class="yes highlight-col">✔ Sim</td>
+                        </tr>
+                        <tr>
+                            <td>Avaliação do profissional</td>
+                            <td class="no">✗</td>
+                            <td class="no">✗</td>
+                            <td class="yes highlight-col">✔ Sim</td>
+                        </tr>
+                        <tr>
+                            <td>100% para pedreiros</td>
+                            <td class="no">✗</td>
+                            <td class="no">✗</td>
+                            <td class="yes highlight-col">✔ Sim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!--  publico alvo  -->
+    <section class="section-publico" id="publico">
+        <div class="section-container">
+            <div class="section-tag center">Público-Alvo</div>
+            <h2 class="section-title center">Para quem é<br><em>o Ponto do Construtor?</em></h2>
+
+            <div class="publico-grid">
+                <div class="publico-card">
+                    <div class="publico-number">1</div>
+                    <svg class="publico-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="40" r="36" fill="rgba(255,107,0,0.08)"/>
+                        <circle cx="40" cy="28" r="14" fill="rgba(255,107,0,0.3)"/>
+                        <path d="M18 64 Q40 52 62 64" fill="rgba(255,107,0,0.2)"/>
+                        <rect x="30" y="42" width="20" height="4" rx="2" fill="rgba(255,107,0,0.4)"/>
+                    </svg>
+                    <h3>Pedreiros & Profissionais</h3>
+                    <p>Autônomos que buscam visibilidade e mais oportunidades de trabalho na região.</p>
+                </div>
+
+                <div class="publico-card publico-featured">
+                    <div class="publico-number">2</div>
+                    <svg class="publico-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="40" r="36" fill="rgba(255,255,255,0.1)"/>
+                        <circle cx="40" cy="28" r="14" fill="rgba(255,255,255,0.3)"/>
+                        <path d="M18 64 Q40 52 62 64" fill="rgba(255,255,255,0.2)"/>
+                        <path d="M28 36 l8 8 16-16" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Clientes Finais</h3>
+                    <p>Pessoas que precisam de reparos, reformas ou pequenos serviços em casa ou no trabalho.</p>
+                </div>
+
+                <div class="publico-card">
+                    <div class="publico-number">3</div>
+                    <svg class="publico-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="40" r="36" fill="rgba(78,205,196,0.08)"/>
+                        <rect x="22" y="30" width="36" height="32" rx="4" fill="none" stroke="rgba(78,205,196,0.5)" stroke-width="2"/>
+                        <rect x="28" y="37" width="8" height="8" rx="1" fill="rgba(78,205,196,0.4)"/>
+                        <rect x="44" y="37" width="8" height="8" rx="1" fill="rgba(78,205,196,0.4)"/>
+                        <rect x="34" y="50" width="12" height="12" rx="1" fill="rgba(78,205,196,0.3)"/>
+                        <path d="M30 30 L40 20 L50 30" stroke="rgba(78,205,196,0.5)" stroke-width="2" fill="none"/>
+                    </svg>
+                    <h3>Construtoras</h3>
+                    <p>Empresas que precisam alocar profissionais qualificados em suas obras com agilidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  mercado  -->
+    <section class="section-mercado">
+        <div class="section-container">
+            <div class="mercado-split">
+                <div class="mercado-content">
+                    <div class="section-tag">Potencial de Mercado</div>
+                    <h2 class="section-title left">Um problema que<br><span class="text-orange">escala com a cidade</span></h2>
+                    <p class="section-desc left">
+                        Quanto maior o centro urbano, maior o problema — e maior a oportunidade. O Ponto do Construtor foi desenhado para crescer com as cidades, tornando-se mais útil e visível à medida que a demanda aumenta.
+                    </p>
+
+                    <div class="mercado-pontos">
+                        <div class="mercado-ponto">
+                            <div class="ponto-icon">🏗️</div>
+                            <div>
+                                <strong>Escala urbana</strong>
+                                <p>O problema se agrava em centros urbanos densos, onde a demanda por serviços é altíssima.</p>
+                            </div>
+                        </div>
+                        <div class="mercado-ponto">
+                            <div class="ponto-icon">📈</div>
+                            <div>
+                                <strong>Alta escalabilidade</strong>
+                                <p>A plataforma pode expandir o portfólio de serviços e atender cada vez mais segmentos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mercado-visual">
+                    <!-- City skyline SVG -->
+                    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="city-svg">
+                        <!-- Sky gradient background -->
+                        <defs>
+                            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#0F0F1A"/>
+                                <stop offset="100%" stop-color="#1A1A2E"/>
+                            </linearGradient>
+                            <linearGradient id="buildingGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.4"/>
+                                <stop offset="100%" stop-color="#FF6B00" stop-opacity="0.1"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="300" fill="url(#skyGrad)" rx="16"/>
+
+                        <!-- estrelas -->
+                        <circle cx="50" cy="30" r="1.5" fill="white" opacity="0.6"/>
+                        <circle cx="120" cy="20" r="1" fill="white" opacity="0.4"/>
+                        <circle cx="200" cy="35" r="1.5" fill="white" opacity="0.5"/>
+                        <circle cx="310" cy="25" r="1" fill="white" opacity="0.6"/>
+                        <circle cx="370" cy="15" r="1.5" fill="white" opacity="0.4"/>
+                        <circle cx="280" cy="50" r="1" fill="white" opacity="0.3"/>
+
+                        <!-- Buildings - back layer -->
+                        <rect x="10" y="140" width="40" height="160" fill="#1A2233" opacity="0.6"/>
+                        <rect x="55" y="160" width="35" height="140" fill="#1A2233" opacity="0.5"/>
+                        <rect x="320" y="130" width="45" height="170" fill="#1A2233" opacity="0.6"/>
+                        <rect x="345" y="150" width="40" height="150" fill="#1A2233" opacity="0.5"/>
+
+                        <!-- Buildings - front layer -->
+                        <rect x="0" y="170" width="55" height="130" fill="#0D1526" stroke="#1E3A5F" stroke-width="0.5"/>
+                        <rect x="60" y="150" width="50" height="150" fill="#0D1526" stroke="#1E3A5F" stroke-width="0.5"/>
+                        <!-- Windows -->
+                        <rect x="8" y="178" width="8" height="6" rx="1" fill="#FF6B00" opacity="0.7"/>
+                        <rect x="20" y="178" width="8" height="6" rx="1" fill="#4ECDC4" opacity="0.5"/>
+                        <rect x="32" y="178" width="8" height="6" rx="1" fill="#FF6B00" opacity="0.3"/>
+                        <rect x="8" y="192" width="8" height="6" rx="1" fill="#A78BFA" opacity="0.5"/>
+                        <rect x="20" y="192" width="8" height="6" rx="1" fill="#FF6B00" opacity="0.5"/>
+                        <rect x="32" y="192" width="8" height="6" rx="1" fill="#4ECDC4" opacity="0.4"/>
+
+                        <!-- Center tall building -->
+                        <rect x="150" y="80" width="100" height="220" fill="#0A1628" stroke="#1E3A5F" stroke-width="0.5"/>
+                        <rect x="165" y="60" width="70" height="240" fill="#0D1A30" stroke="#1E3A5F" stroke-width="0.5"/>
+                        <!-- Orange glow on center building -->
+                        <rect x="165" y="60" width="70" height="240" fill="url(#buildingGrad)" opacity="0.3"/>
+                        <!-- Windows center building -->
+                        <rect x="170" y="70" width="10" height="8" rx="1" fill="#FF6B00" opacity="0.8"/>
+                        <rect x="185" y="70" width="10" height="8" rx="1" fill="#FF6B00" opacity="0.6"/>
+                        <rect x="200" y="70" width="10" height="8" rx="1" fill="#FF6B00" opacity="0.4"/>
+                        <rect x="215" y="70" width="10" height="8" rx="1" fill="#FF6B00" opacity="0.7"/>
+                        <rect x="170" y="85" width="10" height="8" rx="1" fill="#4ECDC4" opacity="0.5"/>
+                        <rect x="185" y="85" width="10" height="8" rx="1" fill="#FF6B00" opacity="0.4"/>
+                        <rect x="200" y="85" width="10" height="8" rx="1" fill="#A78BFA" opacity="0.6"/>
+                        <rect x="215" y="85" width="10" height="8" rx="1" fill="#FF6B00" opacity="0.5"/>
+
+                        <!-- Antenna on center building -->
+                        <rect x="197" y="45" width="3" height="15" rx="1" fill="#FF6B00" opacity="0.8"/>
+                        <circle cx="198.5" cy="43" r="3" fill="#FF6B00" opacity="0.9"/>
+
+                        <!-- NyTech label floating -->
+                        <rect x="140" y="18" width="120" height="28" rx="8" fill="rgba(255,107,0,0.15)" stroke="rgba(255,107,0,0.4)" stroke-width="1"/>
+                        <text x="200" y="36" text-anchor="middle" fill="#FF6B00" font-size="12" font-weight="600" font-family="Syne">Ponto do Construtor</text>
+
+                        <!-- Ground -->
+                        <rect x="0" y="280" width="400" height="20" fill="#050A14"/>
+
+                        <!-- Right side buildings -->
+                        <rect x="290" y="160" width="60" height="140" fill="#0D1526" stroke="#1E3A5F" stroke-width="0.5"/>
+                        <rect x="355" y="180" width="45" height="120" fill="#0D1526" stroke="#1E3A5F" stroke-width="0.5"/>
+                        <rect x="295" y="170" width="8" height="6" rx="1" fill="#FF6B00" opacity="0.5"/>
+                        <rect x="310" y="170" width="8" height="6" rx="1" fill="#4ECDC4" opacity="0.4"/>
+                        <rect x="325" y="170" width="8" height="6" rx="1" fill="#A78BFA" opacity="0.5"/>
+                        <rect x="340" y="170" width="8" height="6" rx="1" fill="#FF6B00" opacity="0.3"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  contato  -->
+    <section class="section-cta" id="contato">
+        <div class="cta-bg-glow"></div>
+        <div class="section-container cta-inner">
+            <div class="section-tag center light">Comece agora</div>
+            <h2 class="cta-title">
+                Pronto para transformar<br>a construção civil?
+            </h2>
+            <p class="cta-desc">
+                Seja você um profissional buscando oportunidades ou uma empresa precisando de mão de obra — o Ponto do Construtor é para você.
+            </p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-cta-primary">Cadastrar como Profissional</a>
+                <a href="#" class="btn-cta-secondary">Contratar Profissionais</a>
+            </div>
+        </div>
+    </section>
+
+    <!--  sobre  -->
+    <section class="section-sobre" id="sobre">
+        <div class="section-container">
+            <div class="section-tag center">Sobre</div>
+            <h2 class="section-title center">A equipe por trás<br>da <span class="text-orange">NyTech</span></h2>
+            <p class="section-desc center">
+                O Ponto do Construtor é uma startup criada por estudantes apaixonados por resolver problemas reais.
+            </p>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">AG</div>
+                    <span class="team-name">Angelo Gabriel Albonetti</span>
+                    <span class="team-ra">R.A: 25054348-2</span>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">DS</div>
+                    <span class="team-name">Daniel Souza</span>
+                    <span class="team-ra">R.A: 25009501-2</span>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">FA</div>
+                    <span class="team-name">Felipe Araújo Souza</span>
+                    <span class="team-ra">R.A: 25001112-2</span>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">FN</div>
+                    <span class="team-name">Felipe Rabassi Nascimento</span>
+                    <span class="team-ra">R.A: 25185870-2</span>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">JP</div>
+                    <span class="team-name">João Pedro Marroni Zoli</span>
+                    <span class="team-ra">R.A: 25000625-2</span>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">LB</div>
+                    <span class="team-name">Lênon Cazatti Belotti</span>
+                    <span class="team-ra">R.A: 25000462-2</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  footer  -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="#FF6B00"/>
+                        <path d="M8 24V14l8-6 8 6v10H20v-6h-8v6H8z" fill="white"/>
+                        <rect x="13" y="20" width="6" height="4" rx="1" fill="#FF6B00"/>
+                    </svg>
+                    <span>NyTech</span>
+                </div>
+                <p>Aqui Sonhos se Tornam Concretos.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Produto</h4>
+                    <a href="#funcionalidades">Funcionalidades</a>
+                    <a href="#diferenciais">Diferenciais</a>
+                    <a href="#publico">Público-Alvo</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <a href="#sobre">Sobre a NyTech</a>
+                    <a href="#contato">Contato</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 NyTech · Ponto do Construtor · Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
 
 </body>
 
