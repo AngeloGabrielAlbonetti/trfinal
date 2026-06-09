@@ -4,25 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lenon e viado</title>
+    <title>lenon e lindo</title>
 
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <link rel="stylesheet" href="ovo.css">
 </head>
-<script type="text/babel" src="js.jsx"></script>
 
 <body>
     <div id="vis"></div>
+    <div id="ro"></div>
     <div class="navbar-container">
 
         <a href="#" class="navbar-logo">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="32" rx="8" fill="#FF6B00"/>
-                        <path d="M8 24V14l8-6 8 6v10H20v-6h-8v6H8z" fill="white"/>
-                        <rect x="13" y="20" width="6" height="4" rx="1" fill="#FF6B00"/>
-                    </svg>
+            <svg width="90" height="32" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="nLogoGradNav" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#29ABE2"/>
+                        <stop offset="50%" stop-color="#7B2FF7"/>
+                        <stop offset="100%" stop-color="#D91ECC"/>
+                    </linearGradient>
+                </defs>
+                <!-- N shape with circuit nodes -->
+                <polyline points="8,56 8,14 36,56 36,14" stroke="url(#nLogoGradNav)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- circuit dots -->
+                <circle cx="8" cy="56" r="4" fill="url(#nLogoGradNav)"/>
+                <circle cx="8" cy="14" r="4" fill="url(#nLogoGradNav)"/>
+                <circle cx="36" cy="14" r="4" fill="url(#nLogoGradNav)"/>
+                <circle cx="36" cy="56" r="4" fill="url(#nLogoGradNav)"/>
+                <!-- small tick lines on nodes -->
+                <line x1="36" y1="14" x2="44" y2="6" stroke="url(#nLogoGradNav)" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="44" cy="6" r="2.5" fill="#D91ECC"/>
+                <!-- Nytech text -->
+                <text x="58" y="43" font-family="Syne, sans-serif" font-size="26" font-weight="700" fill="#2A1A6E">Nytech</text>
+            </svg>
         </a>
         <ul class="navbar-menu">
             <li><a href="#problema">O Problema</a></li>
@@ -34,8 +50,7 @@
         </ul>
         <div class="nav-actions">
             <a href="#solucao" class="btn-nav-outline">Saiba mais</a>
-            <a href="#nda" class="btn-nav-primary" onclick="fordoar()"> Comece agora </a>
-            <div id="ro"></div>
+            <a href="#nda" class="btn-nav-primary"> Comece agora </a>
 
         </div>
 
@@ -56,7 +71,7 @@
             <li><a href="#diferenciais">Diferenciais</a></li>
             <li><a href="#sobre">Sobre</a></li>
         </ul>
-        <a href="#nda" class="btn-nav-primary mobile-cta" onclick="fordoar()">Comece agora</a>
+        <a href="#nda" class="btn-nav-primary mobile-cta">Comece agora</a>
     </div>
     </nav>
     <section class="hero" id="hero">
@@ -76,10 +91,6 @@
                     Aqui Sonhos<br>
                     <span class="hero-title-accent">se Tornam</span><br> Concretos.
                 </h1>
-
-                <p class="hero-sub">
-                    O <strong>Ponto do Construtor</strong> conecta pedreiros e profissionais da construção civil a clientes e construtoras — de forma simples, rápida e confiável.
-                </p>
                 <div class="hero-ctas">
                     <a href="#solucao" class="btn-primary">Descobrir a plataforma</a>
                     <a href="#funcionalidades" class="btn-ghost">Ver funcionalidades →</a>
@@ -116,7 +127,7 @@
                         </div>
                         <div class="mockup-cards">
                             <div class="pro-card">
-                                <div class="pro-avatar" style="background:#FF8C42;">JS</div>
+                                <div class="pro-avatar" style="background:#2563EB;">JS</div>
                                 <div class="pro-info">
                                     <span class="pro-name">João Silva</span>
                                     <span class="pro-role">Pedreiro · Alvenaria</span>
@@ -148,7 +159,7 @@
 
                 <!-- cards flutuantes -->
                 <div class="float-card float-top-right">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.4 5h5.6l-4.5 3.3 1.7 5.2L10 12.3l-5.2 3.2 1.7-5.2L2 7h5.6L10 2z" fill="#FF6B00"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.4 5h5.6l-4.5 3.3 1.7 5.2L10 12.3l-5.2 3.2 1.7-5.2L2 7h5.6L10 2z" fill="#0015ff"/></svg>
                     <div>
                         <div class="float-title">Novo serviço fechado!</div>
                         <div class="float-sub">Reforma em São Paulo · R$1.200</div>
@@ -178,7 +189,7 @@
             </p>
 
             <div class="problema-grid">
-                <div class="problema-card card-orange">
+                <div class="problema-card card-blue">
                     <svg class="problema-illustration" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="60" cy="30" r="18" fill="rgba(255,255,255,0.2)"/>
                         <circle cx="60" cy="30" r="12" fill="rgba(255,255,255,0.4)"/>
@@ -200,9 +211,9 @@
                         <rect x="52" y="50" width="15" height="15" rx="2" fill="rgba(255,255,255,0.1)"/>
                         <rect x="75" y="50" width="15" height="15" rx="2" fill="rgba(255,255,255,0.1)"/>
                         <rect x="45" y="72" width="30" height="18" rx="2" fill="rgba(255,255,255,0.1)"/>
-                        <polygon cx="60" cy="10" points="60,8 72,28 48,28" fill="none" stroke="#FF6B00" stroke-width="2"/>
-                        <path d="M60,8 L72,28 L48,28 Z" stroke="#FF6B00" stroke-width="2" fill="rgba(255,107,0,0.2)"/>
-                        <text x="58" y="22" fill="#FF6B00" font-size="10" font-weight="bold">!</text>
+                        <polygon cx="60" cy="10" points="60,8 72,28 48,28" fill="none" stroke="#0015ff" stroke-width="2"/>
+                        <path d="M60,8 L72,28 L48,28 Z" stroke="#0015ff" stroke-width="2" fill="rgba(0,21,255,0.2)"/>
+                        <text x="58" y="22" fill="#0015ff" font-size="10" font-weight="bold">!</text>
                     </svg>
                     <h3>Para Construtoras</h3>
                     <p>Empresas enfrentam enorme dificuldade para encontrar mão de obra qualificada e completar seus projetos no prazo.</p>
@@ -245,24 +256,32 @@
                     <!-- Connection diagram SVG -->
                     <svg class="conexao-svg" viewBox="0 0 360 320" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <!-- Center hub -->
-                        <circle cx="180" cy="160" r="55" fill="#FF6B00" opacity="0.12"/>
-                        <circle cx="180" cy="160" r="42" fill="#FF6B00" opacity="0.18"/>
-                        <circle cx="180" cy="160" r="30" fill="#FF6B00"/>
-                        <!-- Center icon (house/building) -->
-                        <path d="M170 160v8h20v-8l-10-8-10 8z" fill="white"/>
-                        <rect x="175" y="163" width="5" height="5" rx="1" fill="#FF6B00"/>
-                        <rect x="181" y="163" width="5" height="5" rx="1" fill="#FF6B00"/>
+                        <circle cx="180" cy="160" r="55" fill="#0015ff" opacity="0.12"/>
+                        <circle cx="180" cy="160" r="42" fill="#0015ff" opacity="0.18"/>
+                        <circle cx="180" cy="160" r="30" fill="#0015ff"/>
+                        <!-- Center icon (Nytech N logo) -->
+                        <defs>
+                            <linearGradient id="nCenterGrad" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#29ABE2"/>
+                                <stop offset="100%" stop-color="#D91ECC"/>
+                            </linearGradient>
+                        </defs>
+                        <polyline points="172,172 172,150 188,172 188,150" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <circle cx="172" cy="172" r="2.5" fill="white" opacity="0.9"/>
+                        <circle cx="172" cy="150" r="2.5" fill="white" opacity="0.9"/>
+                        <circle cx="188" cy="150" r="2.5" fill="white" opacity="0.9"/>
+                        <circle cx="188" cy="172" r="2.5" fill="white" opacity="0.9"/>
 
                         <!-- Connecting lines -->
-                        <line x1="180" y1="118" x2="180" y2="75" stroke="#FF6B00" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
-                        <line x1="148" y1="183" x2="105" y2="252" stroke="#FF6B00" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
-                        <line x1="212" y1="183" x2="255" y2="252" stroke="#FF6B00" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+                        <line x1="180" y1="118" x2="180" y2="75" stroke="#0015ff" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+                        <line x1="148" y1="183" x2="105" y2="252" stroke="#0015ff" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+                        <line x1="212" y1="183" x2="255" y2="252" stroke="#0015ff" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
 
                         <!-- Pedreiro node -->
                         <circle cx="180" cy="55" r="28" fill="#1A1A2E"/>
-                        <circle cx="180" cy="55" r="28" stroke="#FF6B00" stroke-width="1.5" opacity="0.5"/>
-                        <circle cx="180" cy="46" r="8" fill="#FF6B00" opacity="0.8"/>
-                        <path d="M165 68 Q180 60 195 68" stroke="#FF6B00" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <circle cx="180" cy="55" r="28" stroke="#0015ff" stroke-width="1.5" opacity="0.5"/>
+                        <circle cx="180" cy="46" r="8" fill="#0015ff" opacity="0.8"/>
+                        <path d="M165 68 Q180 60 195 68" stroke="#0015ff" stroke-width="2" fill="none" stroke-linecap="round"/>
                         <text x="180" y="94" text-anchor="middle" fill="#888" font-size="11" font-family="DM Sans">Pedreiros</text>
 
                         <!-- Cliente node -->
@@ -281,7 +300,7 @@
                         <text x="270" y="308" text-anchor="middle" fill="#888" font-size="11" font-family="DM Sans">Construtoras</text>
 
                         <!-- Animated dots on lines -->
-                        <circle r="4" fill="#FF6B00">
+                        <circle r="4" fill="#0015ff">
                             <animateMotion dur="2s" repeatCount="indefinite" path="M180,118 L180,75"/>
                         </circle>
                         <circle r="4" fill="#4ECDC4">
@@ -297,7 +316,7 @@
                     <div class="section-tag">A Solução</div>
                     <h2 class="section-title left">
                         Uma plataforma que<br>
-                        <span class="text-orange">conecta quem precisa</span><br> a quem faz acontecer.
+                        <span class="text-blue">conecta quem precisa</span><br> a quem faz acontecer.
                     </h2>
                     <p class="section-desc left">
                         O <strong>Ponto do Construtor</strong> é a ponte entre pedreiros e profissionais da construção civil — e os clientes e construtoras que precisam deles. Rápido, seguro e eficiente.
@@ -318,14 +337,14 @@
                 <div class="feature-card feature-large">
                     <!-- Cadastro ilustração -->
                     <svg class="feature-svg" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="30" y="20" width="140" height="110" rx="12" fill="rgba(255,107,0,0.06)" stroke="rgba(255,107,0,0.2)" stroke-width="1.5"/>
-                        <circle cx="100" cy="55" r="20" fill="rgba(255,107,0,0.15)"/>
-                        <circle cx="100" cy="55" r="14" fill="#FF6B00" opacity="0.7"/>
+                        <rect x="30" y="20" width="140" height="110" rx="12" fill="rgba(0,21,255,0.06)" stroke="rgba(0,21,255,0.2)" stroke-width="1.5"/>
+                        <circle cx="100" cy="55" r="20" fill="rgba(0,21,255,0.15)"/>
+                        <circle cx="100" cy="55" r="14" fill="#0015ff" opacity="0.7"/>
                         <path d="M93 55l5 5 9-9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <rect x="50" y="87" width="100" height="8" rx="4" fill="rgba(255,107,0,0.15)"/>
-                        <rect x="65" y="103" width="70" height="8" rx="4" fill="rgba(255,107,0,0.08)"/>
+                        <rect x="50" y="87" width="100" height="8" rx="4" fill="rgba(0,21,255,0.15)"/>
+                        <rect x="65" y="103" width="70" height="8" rx="4" fill="rgba(0,21,255,0.08)"/>
                     </svg>
-                    <div class="feature-icon orange">
+                    <div class="feature-icon blue">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2C6 2 2 6 2 11s4 9 9 9 9-4 9-9-4-9-9-9zm0 4a3 3 0 110 6 3 3 0 010-6zm0 10a7 7 0 01-5.4-2.5C6.4 12 8.6 11 11 11s4.6 1 5.4 2.5A7 7 0 0111 16z" fill="currentColor"/></svg>
                     </div>
                     <h3>Cadastro Rápido</h3>
@@ -357,9 +376,9 @@
                         <rect x="15" y="20" width="110" height="35" rx="10" rx="10" fill="rgba(167,139,250,0.15)" stroke="rgba(167,139,250,0.3)"/>
                         <rect x="25" y="30" width="70" height="6" rx="3" fill="rgba(167,139,250,0.4)"/>
                         <rect x="25" y="40" width="50" height="5" rx="2" fill="rgba(167,139,250,0.2)"/>
-                        <rect x="75" y="65" width="110" height="35" rx="10" fill="rgba(255,107,0,0.1)" stroke="rgba(255,107,0,0.3)"/>
-                        <rect x="85" y="75" width="65" height="6" rx="3" fill="rgba(255,107,0,0.4)"/>
-                        <rect x="85" y="85" width="45" height="5" rx="2" fill="rgba(255,107,0,0.2)"/>
+                        <rect x="75" y="65" width="110" height="35" rx="10" fill="rgba(0,21,255,0.1)" stroke="rgba(0,21,255,0.3)"/>
+                        <rect x="85" y="75" width="65" height="6" rx="3" fill="rgba(0,21,255,0.4)"/>
+                        <rect x="85" y="85" width="45" height="5" rx="2" fill="rgba(0,21,255,0.2)"/>
                     </svg>
                     <div class="feature-icon purple">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M20 2H4a2 2 0 00-2 2v12a2 2 0 002 2h14l4 4V4a2 2 0 00-2-2z" fill="currentColor"/></svg>
@@ -372,16 +391,16 @@
                     <!-- Avaliação ilustração -->
                     <svg class="feature-svg small" viewBox="0 0 280 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
-                            <text x="30" y="55" font-size="28" fill="#FF6B00">★</text>
-                            <text x="72" y="55" font-size="28" fill="#FF6B00">★</text>
-                            <text x="114" y="55" font-size="28" fill="#FF6B00">★</text>
-                            <text x="156" y="55" font-size="28" fill="#FF6B00">★</text>
-                            <text x="198" y="55" font-size="28" fill="rgba(255,107,0,0.3)">★</text>
+                            <text x="30" y="55" font-size="28" fill="#0015ff">★</text>
+                            <text x="72" y="55" font-size="28" fill="#0015ff">★</text>
+                            <text x="114" y="55" font-size="28" fill="#0015ff">★</text>
+                            <text x="156" y="55" font-size="28" fill="#0015ff">★</text>
+                            <text x="198" y="55" font-size="28" fill="rgba(0,21,255,0.3)">★</text>
                         </g>
-                        <rect x="30" y="68" width="180" height="8" rx="4" fill="rgba(255,107,0,0.15)"/>
-                        <rect x="30" y="82" width="120" height="6" rx="3" fill="rgba(255,107,0,0.08)"/>
+                        <rect x="30" y="68" width="180" height="8" rx="4" fill="rgba(0,21,255,0.15)"/>
+                        <rect x="30" y="82" width="120" height="6" rx="3" fill="rgba(0,21,255,0.08)"/>
                     </svg>
-                    <div class="feature-icon orange">
+                    <div class="feature-icon blue">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 4.8 21l1.2-6.8-5-4.9 6.9-1L12 2z" fill="currentColor"/></svg>
                     </div>
                     <h3>Sistema de Avaliação</h3>
@@ -395,7 +414,7 @@
     <section class="section-diff" id="diferenciais">
         <div class="section-container">
             <div class="section-tag center">Diferenciais</div>
-            <h2 class="section-title center">Por que o <span class="text-orange">Ponto do Construtor</span><br>é diferente?</h2>
+            <h2 class="section-title center">Por que o <span class="text-blue">Ponto do Construtor</span><br>é diferente?</h2>
 
             <div class="diff-table-wrapper">
                 <table class="diff-table">
@@ -448,10 +467,10 @@
                 <div class="publico-card">
                     <div class="publico-number">1</div>
                     <svg class="publico-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="40" cy="40" r="36" fill="rgba(255,107,0,0.08)"/>
-                        <circle cx="40" cy="28" r="14" fill="rgba(255,107,0,0.3)"/>
-                        <path d="M18 64 Q40 52 62 64" fill="rgba(255,107,0,0.2)"/>
-                        <rect x="30" y="42" width="20" height="4" rx="2" fill="rgba(255,107,0,0.4)"/>
+                        <circle cx="40" cy="40" r="36" fill="rgba(0,21,255,0.08)"/>
+                        <circle cx="40" cy="28" r="14" fill="rgba(0,21,255,0.3)"/>
+                        <path d="M18 64 Q40 52 62 64" fill="rgba(0,21,255,0.2)"/>
+                        <rect x="30" y="42" width="20" height="4" rx="2" fill="rgba(0,21,255,0.4)"/>
                     </svg>
                     <h3>Pedreiros & Profissionais</h3>
                     <p>Autônomos que buscam visibilidade e mais oportunidades de trabalho na região.</p>
@@ -492,7 +511,7 @@
             <div class="mercado-split">
                 <div class="mercado-content">
                     <div class="section-tag">Potencial de Mercado</div>
-                    <h2 class="section-title left">Um problema que<br><span class="text-orange">escala com a cidade</span></h2>
+                    <h2 class="section-title left">Um problema que<br><span class="text-blue">escala com a cidade</span></h2>
                     <p class="section-desc left">
                         Quanto maior o centro urbano, maior o problema — e maior a oportunidade. O Ponto do Construtor foi desenhado para crescer com as cidades, tornando-se mais útil e visível à medida que a demanda aumenta.
                     </p>
@@ -525,8 +544,8 @@
                                 <stop offset="100%" stop-color="#1A1A2E"/>
                             </linearGradient>
                             <linearGradient id="buildingGrad" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.4"/>
-                                <stop offset="100%" stop-color="#FF6B00" stop-opacity="0.1"/>
+                                <stop offset="0%" stop-color="#0015ff" stop-opacity="0.4"/>
+                                <stop offset="100%" stop-color="#0015ff" stop-opacity="0.1"/>
                             </linearGradient>
                         </defs>
                         <rect width="400" height="300" fill="url(#skyGrad)" rx="16"/>
@@ -549,11 +568,11 @@
                         <rect x="0" y="170" width="55" height="130" fill="#0D1526" stroke="#1E3A5F" stroke-width="0.5"/>
                         <rect x="60" y="150" width="50" height="150" fill="#0D1526" stroke="#1E3A5F" stroke-width="0.5"/>
                         <!-- Windows -->
-                        <rect x="8" y="178" width="8" height="6" rx="1" fill="#FF6B00" opacity="0.7"/>
+                        <rect x="8" y="178" width="8" height="6" rx="1" fill="#0015ff" opacity="0.7"/>
                         <rect x="20" y="178" width="8" height="6" rx="1" fill="#4ECDC4" opacity="0.5"/>
-                        <rect x="32" y="178" width="8" height="6" rx="1" fill="#FF6B00" opacity="0.3"/>
+                        <rect x="32" y="178" width="8" height="6" rx="1" fill="#0015ff" opacity="0.3"/>
                         <rect x="8" y="192" width="8" height="6" rx="1" fill="#A78BFA" opacity="0.5"/>
-                        <rect x="20" y="192" width="8" height="6" rx="1" fill="#FF6B00" opacity="0.5"/>
+                        <rect x="20" y="192" width="8" height="6" rx="1" fill="#0015ff" opacity="0.5"/>
                         <rect x="32" y="192" width="8" height="6" rx="1" fill="#4ECDC4" opacity="0.4"/>
 
                         <!-- Center tall building -->
@@ -562,22 +581,22 @@
                         <!-- Orange glow on center building -->
                         <rect x="165" y="60" width="70" height="240" fill="url(#buildingGrad)" opacity="0.3"/>
                         <!-- Windows center building -->
-                        <rect x="170" y="70" width="10" height="8" rx="1" fill="#FF6B00" opacity="0.8"/>
-                        <rect x="185" y="70" width="10" height="8" rx="1" fill="#FF6B00" opacity="0.6"/>
-                        <rect x="200" y="70" width="10" height="8" rx="1" fill="#FF6B00" opacity="0.4"/>
-                        <rect x="215" y="70" width="10" height="8" rx="1" fill="#FF6B00" opacity="0.7"/>
+                        <rect x="170" y="70" width="10" height="8" rx="1" fill="#0015ff" opacity="0.8"/>
+                        <rect x="185" y="70" width="10" height="8" rx="1" fill="#0015ff" opacity="0.6"/>
+                        <rect x="200" y="70" width="10" height="8" rx="1" fill="#0015ff" opacity="0.4"/>
+                        <rect x="215" y="70" width="10" height="8" rx="1" fill="#0015ff" opacity="0.7"/>
                         <rect x="170" y="85" width="10" height="8" rx="1" fill="#4ECDC4" opacity="0.5"/>
-                        <rect x="185" y="85" width="10" height="8" rx="1" fill="#FF6B00" opacity="0.4"/>
+                        <rect x="185" y="85" width="10" height="8" rx="1" fill="#0015ff" opacity="0.4"/>
                         <rect x="200" y="85" width="10" height="8" rx="1" fill="#A78BFA" opacity="0.6"/>
-                        <rect x="215" y="85" width="10" height="8" rx="1" fill="#FF6B00" opacity="0.5"/>
+                        <rect x="215" y="85" width="10" height="8" rx="1" fill="#0015ff" opacity="0.5"/>
 
                         <!-- Antenna on center building -->
-                        <rect x="197" y="45" width="3" height="15" rx="1" fill="#FF6B00" opacity="0.8"/>
-                        <circle cx="198.5" cy="43" r="3" fill="#FF6B00" opacity="0.9"/>
+                        <rect x="197" y="45" width="3" height="15" rx="1" fill="#0015ff" opacity="0.8"/>
+                        <circle cx="198.5" cy="43" r="3" fill="#0015ff" opacity="0.9"/>
 
                         <!-- NyTech label floating -->
-                        <rect x="140" y="18" width="120" height="28" rx="8" fill="rgba(255,107,0,0.15)" stroke="rgba(255,107,0,0.4)" stroke-width="1"/>
-                        <text x="200" y="36" text-anchor="middle" fill="#FF6B00" font-size="12" font-weight="600" font-family="Syne">Ponto do Construtor</text>
+                        <rect x="140" y="18" width="120" height="28" rx="8" fill="rgba(0,21,255,0.15)" stroke="rgba(0,21,255,0.4)" stroke-width="1"/>
+                        <text x="200" y="36" text-anchor="middle" fill="#0015ff" font-size="12" font-weight="600" font-family="Syne">Ponto do Construtor</text>
 
                         <!-- Ground -->
                         <rect x="0" y="280" width="400" height="20" fill="#050A14"/>
@@ -585,10 +604,10 @@
                         <!-- Right side buildings -->
                         <rect x="290" y="160" width="60" height="140" fill="#0D1526" stroke="#1E3A5F" stroke-width="0.5"/>
                         <rect x="355" y="180" width="45" height="120" fill="#0D1526" stroke="#1E3A5F" stroke-width="0.5"/>
-                        <rect x="295" y="170" width="8" height="6" rx="1" fill="#FF6B00" opacity="0.5"/>
+                        <rect x="295" y="170" width="8" height="6" rx="1" fill="#0015ff" opacity="0.5"/>
                         <rect x="310" y="170" width="8" height="6" rx="1" fill="#4ECDC4" opacity="0.4"/>
                         <rect x="325" y="170" width="8" height="6" rx="1" fill="#A78BFA" opacity="0.5"/>
-                        <rect x="340" y="170" width="8" height="6" rx="1" fill="#FF6B00" opacity="0.3"/>
+                        <rect x="340" y="170" width="8" height="6" rx="1" fill="#0015ff" opacity="0.3"/>
                     </svg>
                 </div>
             </div>
@@ -607,17 +626,16 @@
                 Seja você um profissional buscando oportunidades ou uma empresa precisando de mão de obra — o Ponto do Construtor é para você.
             </p>
             <div class="cta-buttons">
-                <a href="#" class="btn-cta-primary">Cadastrar como Profissional</a>
-                <a href="#" class="btn-cta-secondary">Contratar Profissionais</a>
+                <a href="#!" class="btn-cta-primary" onclick="fordoar()">Cadastrar como Profissional</a>
+                <a href="#!" class="btn-cta-secondary" onclick="fordoar()">Contratar Profissionais</a>
             </div>
         </div>
     </section>
-
     <!--  sobre  -->
     <section class="section-sobre" id="sobre">
         <div class="section-container">
             <div class="section-tag center">Sobre</div>
-            <h2 class="section-title center">A equipe por trás<br>da <span class="text-orange">NyTech</span></h2>
+            <h2 class="section-title center">A equipe por trás<br>da <span class="text-blue">NyTech</span></h2>
             <p class="section-desc center">
                 O Ponto do Construtor é uma startup criada por estudantes apaixonados por resolver problemas reais.
             </p>
@@ -662,12 +680,23 @@
         <div class="footer-container">
             <div class="footer-brand">
                 <div class="footer-logo">
-                    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="32" rx="8" fill="#FF6B00"/>
-                        <path d="M8 24V14l8-6 8 6v10H20v-6h-8v6H8z" fill="white"/>
-                        <rect x="13" y="20" width="6" height="4" rx="1" fill="#FF6B00"/>
+                    <svg width="90" height="28" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="nLogoGradFt" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#29ABE2"/>
+                                <stop offset="50%" stop-color="#7B2FF7"/>
+                                <stop offset="100%" stop-color="#D91ECC"/>
+                            </linearGradient>
+                        </defs>
+                        <polyline points="8,56 8,14 36,56 36,14" stroke="url(#nLogoGradFt)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <circle cx="8" cy="56" r="4" fill="url(#nLogoGradFt)"/>
+                        <circle cx="8" cy="14" r="4" fill="url(#nLogoGradFt)"/>
+                        <circle cx="36" cy="14" r="4" fill="url(#nLogoGradFt)"/>
+                        <circle cx="36" cy="56" r="4" fill="url(#nLogoGradFt)"/>
+                        <line x1="36" y1="14" x2="44" y2="6" stroke="url(#nLogoGradFt)" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="44" cy="6" r="2.5" fill="#D91ECC"/>
+                        <text x="58" y="43" font-family="Syne, sans-serif" font-size="26" font-weight="700" fill="white">Nytech</text>
                     </svg>
-                    <span>NyTech</span>
                 </div>
                 <p>Aqui Sonhos se Tornam Concretos.</p>
             </div>
@@ -692,6 +721,7 @@
         </div>
     </footer>
 
+    <script type="text/babel" src="js.jsx"></script>
 
 </body>
 
