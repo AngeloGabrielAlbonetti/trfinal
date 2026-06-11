@@ -13,25 +13,27 @@
   <div id="vis"></div>
   <div id="ro"></div>
 
-  <!-- NAVBAR -->
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
   <div class="navbar-container">
     <a href="#" class="navbar-logo">
-      <svg width="90" height="32" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="88" height="30" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="nLogoGradNav" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stop-color="#29ABE2"/>
-            <stop offset="50%" stop-color="#7B2FF7"/>
-            <stop offset="100%" stop-color="#D91ECC"/>
+            <stop offset="50%" stop-color="#9b00e8"/>
+            <stop offset="100%" stop-color="#5e42ff"/>
           </linearGradient>
         </defs>
         <polyline points="8,56 8,14 36,56 36,14" stroke="url(#nLogoGradNav)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        <circle cx="8" cy="56" r="4" fill="url(#nLogoGradNav)"/>
-        <circle cx="8" cy="14" r="4" fill="url(#nLogoGradNav)"/>
+        <circle cx="8"  cy="56" r="4" fill="url(#nLogoGradNav)"/>
+        <circle cx="8"  cy="14" r="4" fill="url(#nLogoGradNav)"/>
         <circle cx="36" cy="14" r="4" fill="url(#nLogoGradNav)"/>
         <circle cx="36" cy="56" r="4" fill="url(#nLogoGradNav)"/>
         <line x1="36" y1="14" x2="44" y2="6" stroke="url(#nLogoGradNav)" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="44" cy="6" r="2.5" fill="#D91ECC"/>
-        <text x="58" y="43" font-family="Syne, sans-serif" font-size="26" font-weight="700" fill="#2A1A6E">Nytech</text>
+        <circle cx="44" cy="6" r="2.5" fill="#5e42ff"/>
+        <text x="58" y="43" font-family="Space Grotesk, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">Nytech</text>
       </svg>
     </a>
 
@@ -45,8 +47,8 @@
     </ul>
 
     <div class="nav-actions">
-      <a href="#solucao" class="btn-nav-outline">Saiba mais</a>
-      <a href="#contato" class="btn-nav-primary">Comece agora</a>
+      <a href="#solucao"  class="btn-nav-outline">Saiba mais</a>
+      <a href="#contato"  class="btn-nav-primary">Comece agora</a>
     </div>
 
     <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -67,70 +69,65 @@
     <a href="#contato" class="btn-nav-primary mobile-cta">Comece agora</a>
   </div>
 
-  <!-- HERO -->
+  <!-- ══════════════════════════════════════════
+       HERO — split: esquerda escura + blueprint / direita com mockup
+  ══════════════════════════════════════════ -->
   <section class="hero" id="hero">
-    <div class="hero-bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-    </div>
 
-    <div class="hero-container">
+    <!-- Coluna esquerda: headline + stats -->
+    <div class="hero-left">
+      <p class="hero-eyebrow">Startup · Construção Civil</p>
 
-      <!-- LEFT: content -->
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Startup · Construção Civil
-        </div>
+      <h1 class="hero-title">
+        <span class="solid-line">AQUI</span>
+        <span class="accent-line">SONHOS</span>
+        <span class="solid-line">CONCRETOS.</span>
+      </h1>
 
-        <h1 class="hero-title">
-          Aqui Sonhos<br>
-          <span class="hero-title-accent">se Tornam</span><br>
-          Concretos.
-        </h1>
+      <p class="hero-sub">
+        A plataforma que conecta <strong>pedreiros e profissionais</strong> da
+        construção civil com clientes e construtoras que precisam deles.
+        Rápido, seguro, confiável.
+      </p>
 
-        <p class="hero-sub">
-          A plataforma que conecta <strong>pedreiros e profissionais</strong> da construção civil com clientes e construtoras que precisam deles.
-        </p>
-
-        <div class="hero-ctas">
-          <a href="#solucao" class="btn-primary">Descobrir a plataforma</a>
-          <a href="#funcionalidades" class="btn-ghost">Ver funcionalidades →</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-number">500+</span>
-            <span class="stat-label">Profissionais cadastrados</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-number">98%</span>
-            <span class="stat-label">Taxa de satisfação</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-number">3x</span>
-            <span class="stat-label">Mais rápido que RH tradicional</span>
-          </div>
-        </div>
+      <div class="hero-ctas">
+        <a href="#solucao"         class="btn-primary">Descobrir a plataforma</a>
+        <a href="#funcionalidades" class="btn-ghost">Ver funcionalidades →</a>
       </div>
 
-      <!-- RIGHT: visual -->
-      <div class="hero-visual">
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Profissionais cadastrados</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Taxa de satisfação</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">3×</span>
+          <span class="stat-label">Mais rápido que RH tradicional</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coluna direita: app mockup flutuante -->
+    <div class="hero-right">
+      <div class="cards-stack">
+
+        <!-- Mockup principal -->
         <div class="app-mockup">
           <div class="mockup-header">
             <div class="mockup-dot red"></div>
             <div class="mockup-dot yellow"></div>
             <div class="mockup-dot green"></div>
-            <span class="mockup-title">Ponto do Construtor</span>
+            <span class="mockup-title">ponto-do-construtor · v1.0</span>
           </div>
           <div class="mockup-body">
             <div class="mockup-search">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <circle cx="7" cy="7" r="5" stroke="#999" stroke-width="1.5"/>
-                <path d="M11 11l2.5 2.5" stroke="#999" stroke-width="1.5" stroke-linecap="round"/>
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+                <circle cx="7" cy="7" r="5" stroke="#606078" stroke-width="1.5"/>
+                <path d="M11 11l2.5 2.5" stroke="#606078" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
               <span>Buscar profissionais...</span>
             </div>
@@ -166,10 +163,10 @@
           </div>
         </div>
 
-        <!-- floating cards — só aparecem em desktop (escondidos via CSS em ≤1024px) -->
+        <!-- Notificações flutuantes (hidden mobile) -->
         <div class="float-card float-top-right">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M10 2l2.4 5h5.6l-4.5 3.3 1.7 5.2L10 12.3l-5.2 3.2 1.7-5.2L2 7h5.6L10 2z" fill="#0015ff"/>
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+            <path d="M10 2l2.4 5h5.6l-4.5 3.3 1.7 5.2L10 12.3l-5.2 3.2 1.7-5.2L2 7h5.6L10 2z" fill="#9b00e8"/>
           </svg>
           <div>
             <div class="float-title">Novo serviço fechado!</div>
@@ -178,7 +175,7 @@
         </div>
 
         <div class="float-card float-bottom-left">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
             <circle cx="10" cy="10" r="8" stroke="#22C55E" stroke-width="2"/>
             <path d="M6 10l3 3 5-5" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -187,218 +184,253 @@
             <div class="float-sub">★★★★★ Excelente trabalho!</div>
           </div>
         </div>
-      </div>
 
+      </div><!-- /cards-stack -->
+
+      <!-- Número decorativo de fundo -->
+      <div class="hero-bg-num">01</div>
     </div>
+
   </section>
 
-  <!-- PROBLEMA -->
+  <!-- ══════════════════════════════════════════
+       PROBLEMA — layout com heading lateral
+  ══════════════════════════════════════════ -->
   <section class="section-problema" id="problema">
     <div class="section-container">
-      <div class="section-tag">O Problema</div>
-      <h2 class="section-title">
-        A falta de mão de obra qualificada<br>
-        <em>paralisa o Brasil</em>
-      </h2>
-      <p class="section-desc">A construção civil brasileira enfrenta uma crise silenciosa — e todo mundo sofre.</p>
+      <div class="problema-layout">
 
-      <div class="problema-grid">
-        <div class="problema-card card-blue">
-          <svg class="problema-illustration" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="60" cy="30" r="18" fill="rgba(255,255,255,0.2)"/>
-            <circle cx="60" cy="30" r="12" fill="rgba(255,255,255,0.4)"/>
-            <path d="M40 70 Q60 55 80 70" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none"/>
-            <path d="M30 85 Q60 72 90 85" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none"/>
-            <circle cx="54" cy="28" r="2" fill="white"/>
-            <circle cx="66" cy="28" r="2" fill="white"/>
-            <path d="M55 35 Q60 32 65 35" stroke="white" stroke-width="1.5" fill="none"/>
-            <path d="M15 45 L35 45 M85 45 L105 45" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="3 3"/>
-          </svg>
-          <h3>Para Clientes</h3>
-          <p>Pessoas que precisam de alguém para realizar pequenos serviços não sabem onde encontrar profissionais confiáveis.</p>
+        <!-- Heading lateral fixo -->
+        <div class="problema-heading">
+          <div class="section-tag">O Problema</div>
+          <h2 class="section-title">
+            A falta de mão de obra<br>
+            <em>paralisa o Brasil</em>
+          </h2>
+          <p class="section-desc">
+            A construção civil brasileira enfrenta uma crise silenciosa — e todo mundo sofre.
+          </p>
         </div>
 
-        <div class="problema-card card-dark">
-          <svg class="problema-illustration" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="20" y="40" width="80" height="50" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-            <rect x="30" y="50" width="15" height="15" rx="2" fill="rgba(255,255,255,0.1)"/>
-            <rect x="52" y="50" width="15" height="15" rx="2" fill="rgba(255,255,255,0.1)"/>
-            <rect x="75" y="50" width="15" height="15" rx="2" fill="rgba(255,255,255,0.1)"/>
-            <rect x="45" y="72" width="30" height="18" rx="2" fill="rgba(255,255,255,0.1)"/>
-            <path d="M60,8 L72,28 L48,28 Z" stroke="#0015ff" stroke-width="2" fill="rgba(0,21,255,0.2)"/>
-            <text x="58" y="22" fill="#0015ff" font-size="10" font-weight="bold">!</text>
-          </svg>
-          <h3>Para Construtoras</h3>
-          <p>Empresas enfrentam enorme dificuldade para encontrar mão de obra qualificada e completar projetos no prazo.</p>
-        </div>
+        <!-- Cards em coluna -->
+        <div class="problema-cards">
 
-        <div class="problema-card card-light">
-          <div class="impacto-list">
-            <div class="impacto-item">
-              <span class="impacto-num">01</span>
-              <div>
-                <strong>Problemas estruturais</strong>
-                <p>Falta de manutenção expõe construções a riscos sérios</p>
+          <div class="problema-card card-blue">
+            <svg class="problema-illustration" viewBox="0 0 120 100" fill="none">
+              <circle cx="60" cy="30" r="18" fill="rgba(255,255,255,.2)"/>
+              <circle cx="60" cy="30" r="12" fill="rgba(255,255,255,.4)"/>
+              <path d="M40 70 Q60 55 80 70" stroke="rgba(255,255,255,.6)" stroke-width="2" fill="none"/>
+              <path d="M30 85 Q60 72 90 85" stroke="rgba(255,255,255,.3)" stroke-width="2" fill="none"/>
+              <circle cx="54" cy="28" r="2" fill="white"/>
+              <circle cx="66" cy="28" r="2" fill="white"/>
+              <path d="M55 35 Q60 32 65 35" stroke="white" stroke-width="1.5" fill="none"/>
+              <path d="M15 45 L35 45 M85 45 L105 45" stroke="rgba(255,255,255,.3)" stroke-width="1.5" stroke-dasharray="3 3"/>
+            </svg>
+            <h3>Para Clientes</h3>
+            <p>Pessoas que precisam de alguém para realizar pequenos serviços não sabem onde encontrar profissionais confiáveis.</p>
+          </div>
+
+          <div class="problema-card card-dark">
+            <svg class="problema-illustration" viewBox="0 0 120 100" fill="none">
+              <rect x="20" y="40" width="80" height="50" rx="4" fill="rgba(255,255,255,.05)" stroke="rgba(155,0,232,.25)" stroke-width="1.5"/>
+              <rect x="30" y="50" width="15" height="15" rx="2" fill="rgba(155,0,232,.1)"/>
+              <rect x="52" y="50" width="15" height="15" rx="2" fill="rgba(155,0,232,.1)"/>
+              <rect x="75" y="50" width="15" height="15" rx="2" fill="rgba(155,0,232,.1)"/>
+              <rect x="45" y="72" width="30" height="18" rx="2" fill="rgba(155,0,232,.1)"/>
+              <path d="M60,8 L72,28 L48,28 Z" stroke="#9b00e8" stroke-width="2" fill="rgba(155,0,232,.15)"/>
+              <text x="58" y="22" fill="#9b00e8" font-size="10" font-weight="bold">!</text>
+            </svg>
+            <h3>Para Construtoras</h3>
+            <p>Empresas enfrentam enorme dificuldade para encontrar mão de obra qualificada e completar projetos no prazo.</p>
+          </div>
+
+          <div class="problema-card card-light">
+            <div class="impacto-list">
+              <div class="impacto-item">
+                <span class="impacto-num">01</span>
+                <div>
+                  <strong>Problemas estruturais</strong>
+                  <p>Falta de manutenção expõe construções a riscos sérios</p>
+                </div>
               </div>
-            </div>
-            <div class="impacto-item">
-              <span class="impacto-num">02</span>
-              <div>
-                <strong>Atraso nas obras</strong>
-                <p>Projetos sem mão de obra suficiente atrasam entregas</p>
+              <div class="impacto-item">
+                <span class="impacto-num">02</span>
+                <div>
+                  <strong>Atraso nas obras</strong>
+                  <p>Projetos sem mão de obra suficiente atrasam entregas</p>
+                </div>
               </div>
-            </div>
-            <div class="impacto-item">
-              <span class="impacto-num">03</span>
-              <div>
-                <strong>Prejuízo econômico</strong>
-                <p>Custos extras e perda de negócios para todos os lados</p>
+              <div class="impacto-item">
+                <span class="impacto-num">03</span>
+                <div>
+                  <strong>Prejuízo econômico</strong>
+                  <p>Custos extras e perda de negócios para todos os lados</p>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SOLUÇÃO -->
+  <!-- ══════════════════════════════════════════
+       SOLUÇÃO
+  ══════════════════════════════════════════ -->
   <section class="section-solucao" id="solucao">
     <div class="section-container">
       <div class="solucao-split">
+
         <div class="solucao-visual">
           <svg class="conexao-svg" viewBox="0 0 360 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="180" cy="160" r="55" fill="#0015ff" opacity="0.12"/>
-            <circle cx="180" cy="160" r="42" fill="#0015ff" opacity="0.18"/>
-            <circle cx="180" cy="160" r="30" fill="#0015ff"/>
-            <defs>
-              <linearGradient id="nCenterGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#29ABE2"/><stop offset="100%" stop-color="#D91ECC"/>
-              </linearGradient>
-            </defs>
+            <circle cx="180" cy="160" r="55" fill="#9b00e8" opacity="0.1"/>
+            <circle cx="180" cy="160" r="42" fill="#9b00e8" opacity="0.16"/>
+            <circle cx="180" cy="160" r="30" fill="#9b00e8"/>
             <polyline points="172,172 172,150 188,172 188,150" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <circle cx="172" cy="172" r="2.5" fill="white" opacity="0.9"/>
             <circle cx="172" cy="150" r="2.5" fill="white" opacity="0.9"/>
             <circle cx="188" cy="150" r="2.5" fill="white" opacity="0.9"/>
             <circle cx="188" cy="172" r="2.5" fill="white" opacity="0.9"/>
-            <line x1="180" y1="118" x2="180" y2="75" stroke="#0015ff" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
-            <line x1="148" y1="183" x2="105" y2="252" stroke="#0015ff" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
-            <line x1="212" y1="183" x2="255" y2="252" stroke="#0015ff" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
-            <circle cx="180" cy="55" r="28" fill="#1A1A2E"/><circle cx="180" cy="55" r="28" stroke="#0015ff" stroke-width="1.5" opacity="0.5"/>
-            <circle cx="180" cy="46" r="8" fill="#0015ff" opacity="0.8"/>
-            <path d="M165 68 Q180 60 195 68" stroke="#0015ff" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <text x="180" y="94" text-anchor="middle" fill="#888" font-size="11" font-family="DM Sans">Pedreiros</text>
-            <circle cx="90" cy="270" r="28" fill="#1A1A2E"/><circle cx="90" cy="270" r="28" stroke="#4ECDC4" stroke-width="1.5" opacity="0.5"/>
-            <circle cx="90" cy="261" r="8" fill="#4ECDC4" opacity="0.8"/>
+            <line x1="180" y1="118" x2="180" y2="75"    stroke="#9b00e8" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+            <line x1="148" y1="183" x2="105" y2="252"   stroke="#9b00e8" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+            <line x1="212" y1="183" x2="255" y2="252"   stroke="#9b00e8" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+            <!-- Pedreiros -->
+            <circle cx="180" cy="55"  r="28" fill="#12121C"/><circle cx="180" cy="55"  r="28" stroke="#9b00e8" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="180" cy="46"  r="8"  fill="#9b00e8" opacity="0.8"/>
+            <path d="M165 68 Q180 60 195 68" stroke="#9b00e8" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <text x="180" y="93" text-anchor="middle" fill="#606078" font-size="11" font-family="Inter">Pedreiros</text>
+            <!-- Clientes -->
+            <circle cx="90"  cy="270" r="28" fill="#12121C"/><circle cx="90"  cy="270" r="28" stroke="#4ECDC4" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="90"  cy="261" r="8"  fill="#4ECDC4" opacity="0.8"/>
             <path d="M75 283 Q90 275 105 283" stroke="#4ECDC4" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <text x="90" y="308" text-anchor="middle" fill="#888" font-size="11" font-family="DM Sans">Clientes</text>
-            <circle cx="270" cy="270" r="28" fill="#1A1A2E"/><circle cx="270" cy="270" r="28" stroke="#A78BFA" stroke-width="1.5" opacity="0.5"/>
+            <text x="90" y="308" text-anchor="middle" fill="#606078" font-size="11" font-family="Inter">Clientes</text>
+            <!-- Construtoras -->
+            <circle cx="270" cy="270" r="28" fill="#12121C"/><circle cx="270" cy="270" r="28" stroke="#A78BFA" stroke-width="1.5" opacity="0.5"/>
             <rect x="258" y="258" width="24" height="20" rx="2" fill="none" stroke="#A78BFA" stroke-width="1.5" opacity="0.8"/>
             <rect x="262" y="262" width="5" height="5" rx="1" fill="#A78BFA" opacity="0.6"/>
             <rect x="273" y="262" width="5" height="5" rx="1" fill="#A78BFA" opacity="0.6"/>
-            <text x="270" y="308" text-anchor="middle" fill="#888" font-size="11" font-family="DM Sans">Construtoras</text>
-            <circle r="4" fill="#0015ff"><animateMotion dur="2s" repeatCount="indefinite" path="M180,118 L180,75"/></circle>
+            <text x="270" y="308" text-anchor="middle" fill="#606078" font-size="11" font-family="Inter">Construtoras</text>
+            <!-- Animações -->
+            <circle r="4" fill="#9b00e8"><animateMotion dur="2s"   repeatCount="indefinite" path="M180,118 L180,75"/></circle>
             <circle r="4" fill="#4ECDC4"><animateMotion dur="2.5s" repeatCount="indefinite" path="M148,183 L105,252"/></circle>
-            <circle r="4" fill="#A78BFA"><animateMotion dur="3s" repeatCount="indefinite" path="M212,183 L255,252"/></circle>
+            <circle r="4" fill="#A78BFA"><animateMotion dur="3s"   repeatCount="indefinite" path="M212,183 L255,252"/></circle>
           </svg>
         </div>
 
         <div class="solucao-content">
           <div class="section-tag">A Solução</div>
-          <h2 class="section-title left">
+          <h2 class="section-title">
             Uma plataforma que<br>
-            <span class="text-blue">conecta quem precisa</span><br>a quem faz acontecer.
+            <span class="text-blue">conecta quem precisa</span><br>
+            a quem faz acontecer.
           </h2>
-          <p class="section-desc left">
-            O <strong>Ponto do Construtor</strong> é a ponte entre pedreiros e profissionais da construção civil — e os clientes e construtoras que precisam deles. Rápido, seguro e eficiente.
+          <p class="section-desc">
+            O <strong>Ponto do Construtor</strong> é a ponte entre pedreiros e profissionais
+            da construção civil — e os clientes e construtoras que precisam deles.
+            Rápido, seguro e eficiente.
           </p>
           <a href="#funcionalidades" class="btn-primary">Ver funcionalidades</a>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- FUNCIONALIDADES -->
+  <!-- ══════════════════════════════════════════
+       FUNCIONALIDADES — bento grid
+  ══════════════════════════════════════════ -->
   <section class="section-features" id="funcionalidades">
     <div class="section-container">
       <div class="section-tag center">Funcionalidades</div>
       <h2 class="section-title center">Tudo que você precisa,<br><em>em um só lugar</em></h2>
 
       <div class="features-grid">
+
+        <!-- Card grande (span 2 linhas) -->
         <div class="feature-card feature-large">
-          <svg class="feature-svg" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="30" y="20" width="140" height="110" rx="12" fill="rgba(0,21,255,0.06)" stroke="rgba(0,21,255,0.2)" stroke-width="1.5"/>
-            <circle cx="100" cy="55" r="20" fill="rgba(0,21,255,0.15)"/>
-            <circle cx="100" cy="55" r="14" fill="#0015ff" opacity="0.7"/>
+          <svg class="feature-svg" viewBox="0 0 200 150" fill="none">
+            <rect x="30" y="20" width="140" height="110" rx="12" fill="rgba(155,0,232,.06)" stroke="rgba(155,0,232,.2)" stroke-width="1.5"/>
+            <circle cx="100" cy="55" r="20" fill="rgba(155,0,232,.12)"/>
+            <circle cx="100" cy="55" r="14" fill="#9b00e8" opacity="0.7"/>
             <path d="M93 55l5 5 9-9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="50" y="87" width="100" height="8" rx="4" fill="rgba(0,21,255,0.15)"/>
-            <rect x="65" y="103" width="70" height="8" rx="4" fill="rgba(0,21,255,0.08)"/>
+            <rect x="50" y="87" width="100" height="8" rx="4" fill="rgba(155,0,232,.15)"/>
+            <rect x="65" y="103" width="70" height="8" rx="4" fill="rgba(155,0,232,.08)"/>
           </svg>
           <div class="feature-icon blue">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2C6 2 2 6 2 11s4 9 9 9 9-4 9-9-4-9-9-9zm0 4a3 3 0 110 6 3 3 0 010-6zm0 10a7 7 0 01-5.4-2.5C6.4 12 8.6 11 11 11s4.6 1 5.4 2.5A7 7 0 0111 16z" fill="currentColor"/></svg>
+            <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M11 2C6 2 2 6 2 11s4 9 9 9 9-4 9-9-4-9-9-9zm0 4a3 3 0 110 6 3 3 0 010-6zm0 10a7 7 0 01-5.4-2.5C6.4 12 8.6 11 11 11s4.6 1 5.4 2.5A7 7 0 0111 16z" fill="currentColor"/></svg>
           </div>
           <h3>Cadastro Rápido</h3>
-          <p>Registro simples para pedreiros e contratantes. Crie seu perfil em minutos e comece a trabalhar ou contratar.</p>
+          <p>Registro simples para pedreiros e contratantes. Crie seu perfil em minutos e comece a trabalhar ou contratar imediatamente.</p>
         </div>
 
+        <!-- Card normal 1 -->
         <div class="feature-card">
-          <svg class="feature-svg small" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="20" y="15" width="160" height="35" rx="8" fill="rgba(78,205,196,0.1)" stroke="rgba(78,205,196,0.2)"/>
-            <circle cx="40" cy="32" r="10" fill="rgba(78,205,196,0.3)"/>
-            <rect x="56" y="24" width="60" height="6" rx="3" fill="rgba(78,205,196,0.3)"/>
-            <rect x="56" y="34" width="40" height="5" rx="2" fill="rgba(78,205,196,0.15)"/>
-            <rect x="20" y="58" width="160" height="35" rx="8" fill="rgba(78,205,196,0.06)" stroke="rgba(78,205,196,0.1)"/>
-            <circle cx="40" cy="75" r="10" fill="rgba(78,205,196,0.15)"/>
-            <rect x="56" y="67" width="70" height="6" rx="3" fill="rgba(78,205,196,0.15)"/>
-            <rect x="56" y="77" width="45" height="5" rx="2" fill="rgba(78,205,196,0.1)"/>
+          <svg class="feature-svg small" viewBox="0 0 200 120" fill="none">
+            <rect x="20" y="15" width="160" height="35" rx="8" fill="rgba(78,205,196,.1)" stroke="rgba(78,205,196,.2)"/>
+            <circle cx="40" cy="32" r="10" fill="rgba(78,205,196,.3)"/>
+            <rect x="56" y="24" width="60" height="6" rx="3" fill="rgba(78,205,196,.3)"/>
+            <rect x="56" y="34" width="40" height="5" rx="2" fill="rgba(78,205,196,.15)"/>
+            <rect x="20" y="58" width="160" height="35" rx="8" fill="rgba(78,205,196,.06)" stroke="rgba(78,205,196,.1)"/>
+            <circle cx="40" cy="75" r="10" fill="rgba(78,205,196,.15)"/>
+            <rect x="56" y="67" width="70" height="6" rx="3" fill="rgba(78,205,196,.15)"/>
+            <rect x="56" y="77" width="45" height="5" rx="2" fill="rgba(78,205,196,.1)"/>
           </svg>
           <div class="feature-icon teal">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="3" width="18" height="4" rx="2" fill="currentColor"/><rect x="2" y="9" width="18" height="4" rx="2" fill="currentColor" opacity="0.7"/><rect x="2" y="15" width="18" height="4" rx="2" fill="currentColor" opacity="0.4"/></svg>
+            <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><rect x="2" y="3" width="18" height="4" rx="2" fill="currentColor"/><rect x="2" y="9" width="18" height="4" rx="2" fill="currentColor" opacity=".7"/><rect x="2" y="15" width="18" height="4" rx="2" fill="currentColor" opacity=".4"/></svg>
           </div>
           <h3>Feed de Profissionais</h3>
-          <p>Lista de profissionais disponíveis com foto, especialidade e avaliações para você escolher com confiança.</p>
+          <p>Listagem de profissionais disponíveis com foto, especialidade e avaliações.</p>
         </div>
 
+        <!-- Card normal 2 -->
         <div class="feature-card">
-          <svg class="feature-svg small" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="15" y="20" width="110" height="35" rx="10" fill="rgba(167,139,250,0.15)" stroke="rgba(167,139,250,0.3)"/>
-            <rect x="25" y="30" width="70" height="6" rx="3" fill="rgba(167,139,250,0.4)"/>
-            <rect x="25" y="40" width="50" height="5" rx="2" fill="rgba(167,139,250,0.2)"/>
-            <rect x="75" y="65" width="110" height="35" rx="10" fill="rgba(0,21,255,0.1)" stroke="rgba(0,21,255,0.3)"/>
-            <rect x="85" y="75" width="65" height="6" rx="3" fill="rgba(0,21,255,0.4)"/>
-            <rect x="85" y="85" width="45" height="5" rx="2" fill="rgba(0,21,255,0.2)"/>
+          <svg class="feature-svg small" viewBox="0 0 200 120" fill="none">
+            <rect x="15" y="20" width="110" height="35" rx="10" fill="rgba(167,139,250,.12)" stroke="rgba(167,139,250,.25)"/>
+            <rect x="25" y="30" width="70" height="6" rx="3" fill="rgba(167,139,250,.4)"/>
+            <rect x="25" y="40" width="50" height="5" rx="2" fill="rgba(167,139,250,.2)"/>
+            <rect x="75" y="65" width="110" height="35" rx="10" fill="rgba(155,0,232,.08)" stroke="rgba(155,0,232,.25)"/>
+            <rect x="85" y="75" width="65" height="6" rx="3" fill="rgba(155,0,232,.4)"/>
+            <rect x="85" y="85" width="45" height="5" rx="2" fill="rgba(155,0,232,.2)"/>
           </svg>
           <div class="feature-icon purple">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M20 2H4a2 2 0 00-2 2v12a2 2 0 002 2h14l4 4V4a2 2 0 00-2-2z" fill="currentColor"/></svg>
+            <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M20 2H4a2 2 0 00-2 2v12a2 2 0 002 2h14l4 4V4a2 2 0 00-2-2z" fill="currentColor"/></svg>
           </div>
           <h3>Chat Direto</h3>
-          <p>Comunicação direta entre profissionais e contratantes para alinhar detalhes e fechar contratos sem burocracia.</p>
+          <p>Comunicação direta entre profissionais e contratantes para fechar contratos sem burocracia.</p>
         </div>
 
+        <!-- Card largo (span 2 colunas) -->
         <div class="feature-card feature-wide">
-          <svg class="feature-svg small" viewBox="0 0 280 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <text x="30" y="55" font-size="28" fill="#0015ff">★</text>
-            <text x="72" y="55" font-size="28" fill="#0015ff">★</text>
-            <text x="114" y="55" font-size="28" fill="#0015ff">★</text>
-            <text x="156" y="55" font-size="28" fill="#0015ff">★</text>
-            <text x="198" y="55" font-size="28" fill="rgba(0,21,255,0.3)">★</text>
-            <rect x="30" y="68" width="180" height="8" rx="4" fill="rgba(0,21,255,0.15)"/>
-            <rect x="30" y="82" width="120" height="6" rx="3" fill="rgba(0,21,255,0.08)"/>
+          <svg class="feature-svg small" viewBox="0 0 280 100" fill="none">
+            <text x="20"  y="55" font-size="28" fill="#9b00e8">★</text>
+            <text x="62"  y="55" font-size="28" fill="#9b00e8">★</text>
+            <text x="104" y="55" font-size="28" fill="#9b00e8">★</text>
+            <text x="146" y="55" font-size="28" fill="#9b00e8">★</text>
+            <text x="188" y="55" font-size="28" fill="rgba(155,0,232,.25)">★</text>
+            <rect x="20" y="66" width="180" height="7" rx="3" fill="rgba(155,0,232,.12)"/>
+            <rect x="20" y="79" width="120" height="5" rx="2" fill="rgba(155,0,232,.07)"/>
           </svg>
           <div class="feature-icon blue">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 4.8 21l1.2-6.8-5-4.9 6.9-1L12 2z" fill="currentColor"/></svg>
+            <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 4.8 21l1.2-6.8-5-4.9 6.9-1L12 2z" fill="currentColor"/></svg>
           </div>
           <h3>Sistema de Avaliação</h3>
           <p>Após cada serviço, contratantes e profissionais se avaliam mutuamente. Notas e comentários constroem reputação e transparência no marketplace.</p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- DIFERENCIAIS -->
+  <!-- ══════════════════════════════════════════
+       DIFERENCIAIS
+  ══════════════════════════════════════════ -->
   <section class="section-diff" id="diferenciais">
     <div class="section-container">
       <div class="section-tag center">Diferenciais</div>
-      <h2 class="section-title center">Por que o <span class="text-blue">Ponto do Construtor</span><br>é diferente?</h2>
+      <h2 class="section-title center">
+        Por que o <span class="text-blue">Ponto do Construtor</span><br>é diferente?
+      </h2>
 
       <div class="diff-table-wrapper">
         <table class="diff-table">
@@ -441,31 +473,36 @@
     </div>
   </section>
 
-  <!-- PÚBLICO-ALVO -->
+  <!-- ══════════════════════════════════════════
+       PÚBLICO-ALVO
+  ══════════════════════════════════════════ -->
   <section class="section-publico" id="publico">
     <div class="section-container">
       <div class="section-tag center">Público-Alvo</div>
-      <h2 class="section-title center">Para quem é<br><em>o Ponto do Construtor?</em></h2>
+      <h2 class="section-title center">
+        Para quem é<br><em>o Ponto do Construtor?</em>
+      </h2>
 
       <div class="publico-grid">
+
         <div class="publico-card">
-          <div class="publico-number">1</div>
-          <svg class="publico-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="40" cy="40" r="36" fill="rgba(0,21,255,0.08)"/>
-            <circle cx="40" cy="28" r="14" fill="rgba(0,21,255,0.3)"/>
-            <path d="M18 64 Q40 52 62 64" fill="rgba(0,21,255,0.2)"/>
-            <rect x="30" y="42" width="20" height="4" rx="2" fill="rgba(0,21,255,0.4)"/>
+          <div class="publico-number">01</div>
+          <svg class="publico-svg" viewBox="0 0 80 80" fill="none">
+            <circle cx="40" cy="40" r="36" fill="rgba(155,0,232,.08)"/>
+            <circle cx="40" cy="28" r="14" fill="rgba(155,0,232,.25)"/>
+            <path d="M18 64 Q40 52 62 64" fill="rgba(155,0,232,.15)"/>
+            <rect x="30" y="42" width="20" height="4" rx="2" fill="rgba(155,0,232,.4)"/>
           </svg>
           <h3>Pedreiros & Profissionais</h3>
           <p>Autônomos que buscam visibilidade e mais oportunidades de trabalho na região.</p>
         </div>
 
         <div class="publico-card publico-featured">
-          <div class="publico-number">2</div>
-          <svg class="publico-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="40" cy="40" r="36" fill="rgba(255,255,255,0.1)"/>
-            <circle cx="40" cy="28" r="14" fill="rgba(255,255,255,0.3)"/>
-            <path d="M18 64 Q40 52 62 64" fill="rgba(255,255,255,0.2)"/>
+          <div class="publico-number">02</div>
+          <svg class="publico-svg" viewBox="0 0 80 80" fill="none">
+            <circle cx="40" cy="40" r="36" fill="rgba(255,255,255,.1)"/>
+            <circle cx="40" cy="28" r="14" fill="rgba(255,255,255,.3)"/>
+            <path d="M18 64 Q40 52 62 64" fill="rgba(255,255,255,.2)"/>
             <path d="M28 36 l8 8 16-16" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           <h3>Clientes Finais</h3>
@@ -473,30 +510,39 @@
         </div>
 
         <div class="publico-card">
-          <div class="publico-number">3</div>
-          <svg class="publico-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="40" cy="40" r="36" fill="rgba(78,205,196,0.08)"/>
-            <rect x="22" y="30" width="36" height="32" rx="4" fill="none" stroke="rgba(78,205,196,0.5)" stroke-width="2"/>
-            <rect x="28" y="37" width="8" height="8" rx="1" fill="rgba(78,205,196,0.4)"/>
-            <rect x="44" y="37" width="8" height="8" rx="1" fill="rgba(78,205,196,0.4)"/>
-            <rect x="34" y="50" width="12" height="12" rx="1" fill="rgba(78,205,196,0.3)"/>
-            <path d="M30 30 L40 20 L50 30" stroke="rgba(78,205,196,0.5)" stroke-width="2" fill="none"/>
+          <div class="publico-number">03</div>
+          <svg class="publico-svg" viewBox="0 0 80 80" fill="none">
+            <circle cx="40" cy="40" r="36" fill="rgba(78,205,196,.08)"/>
+            <rect x="22" y="30" width="36" height="32" rx="4" fill="none" stroke="rgba(78,205,196,.5)" stroke-width="2"/>
+            <rect x="28" y="37" width="8" height="8" rx="1" fill="rgba(78,205,196,.4)"/>
+            <rect x="44" y="37" width="8" height="8" rx="1" fill="rgba(78,205,196,.4)"/>
+            <rect x="34" y="50" width="12" height="12" rx="1" fill="rgba(78,205,196,.3)"/>
+            <path d="M30 30 L40 20 L50 30" stroke="rgba(78,205,196,.5)" stroke-width="2" fill="none"/>
           </svg>
           <h3>Construtoras</h3>
           <p>Empresas que precisam alocar profissionais qualificados em suas obras com agilidade.</p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- MERCADO -->
+  <!-- ══════════════════════════════════════════
+       MERCADO
+  ══════════════════════════════════════════ -->
   <section class="section-mercado">
     <div class="section-container">
       <div class="mercado-split">
+
         <div class="mercado-content">
           <div class="section-tag">Potencial de Mercado</div>
-          <h2 class="section-title left">Um problema que<br><span class="text-blue">escala com a cidade</span></h2>
-          <p class="section-desc left">Quanto maior o centro urbano, maior o problema — e maior a oportunidade. O Ponto do Construtor foi desenhado para crescer com as cidades.</p>
+          <h2 class="section-title">
+            Um problema que<br><span class="text-blue">escala com a cidade</span>
+          </h2>
+          <p class="section-desc">
+            Quanto maior o centro urbano, maior o problema — e maior a oportunidade.
+            O Ponto do Construtor foi desenhado para crescer com as cidades.
+          </p>
 
           <div class="mercado-pontos">
             <div class="mercado-ponto">
@@ -520,74 +566,88 @@
           <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="city-svg">
             <defs>
               <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#0F0F1A"/><stop offset="100%" stop-color="#1A1A2E"/>
+                <stop offset="0%" stop-color="#0A0A12"/><stop offset="100%" stop-color="#12121E"/>
               </linearGradient>
               <linearGradient id="buildingGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#0015ff" stop-opacity="0.4"/>
-                <stop offset="100%" stop-color="#0015ff" stop-opacity="0.1"/>
+                <stop offset="0%" stop-color="#9b00e8" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#9b00e8" stop-opacity="0.08"/>
               </linearGradient>
             </defs>
             <rect width="400" height="300" fill="url(#skyGrad)" rx="16"/>
-            <circle cx="50" cy="30" r="1.5" fill="white" opacity="0.6"/>
-            <circle cx="120" cy="20" r="1" fill="white" opacity="0.4"/>
-            <circle cx="200" cy="35" r="1.5" fill="white" opacity="0.5"/>
-            <circle cx="310" cy="25" r="1" fill="white" opacity="0.6"/>
-            <circle cx="370" cy="15" r="1.5" fill="white" opacity="0.4"/>
-            <rect x="0" y="170" width="55" height="130" fill="#0D1526" stroke="#1E3A5F" stroke-width="0.5"/>
-            <rect x="60" y="150" width="50" height="150" fill="#0D1526" stroke="#1E3A5F" stroke-width="0.5"/>
-            <rect x="8" y="178" width="8" height="6" rx="1" fill="#0015ff" opacity="0.7"/>
-            <rect x="20" y="178" width="8" height="6" rx="1" fill="#4ECDC4" opacity="0.5"/>
-            <rect x="32" y="178" width="8" height="6" rx="1" fill="#0015ff" opacity="0.3"/>
-            <rect x="8" y="192" width="8" height="6" rx="1" fill="#A78BFA" opacity="0.5"/>
-            <rect x="20" y="192" width="8" height="6" rx="1" fill="#0015ff" opacity="0.5"/>
-            <rect x="32" y="192" width="8" height="6" rx="1" fill="#4ECDC4" opacity="0.4"/>
-            <rect x="150" y="80" width="100" height="220" fill="#0A1628" stroke="#1E3A5F" stroke-width="0.5"/>
-            <rect x="165" y="60" width="70" height="240" fill="#0D1A30" stroke="#1E3A5F" stroke-width="0.5"/>
-            <rect x="165" y="60" width="70" height="240" fill="url(#buildingGrad)" opacity="0.3"/>
-            <rect x="170" y="70" width="10" height="8" rx="1" fill="#0015ff" opacity="0.8"/>
-            <rect x="185" y="70" width="10" height="8" rx="1" fill="#0015ff" opacity="0.6"/>
-            <rect x="200" y="70" width="10" height="8" rx="1" fill="#0015ff" opacity="0.4"/>
-            <rect x="215" y="70" width="10" height="8" rx="1" fill="#0015ff" opacity="0.7"/>
-            <rect x="170" y="85" width="10" height="8" rx="1" fill="#4ECDC4" opacity="0.5"/>
-            <rect x="185" y="85" width="10" height="8" rx="1" fill="#0015ff" opacity="0.4"/>
-            <rect x="200" y="85" width="10" height="8" rx="1" fill="#A78BFA" opacity="0.6"/>
-            <rect x="215" y="85" width="10" height="8" rx="1" fill="#0015ff" opacity="0.5"/>
-            <rect x="197" y="45" width="3" height="15" rx="1" fill="#0015ff" opacity="0.8"/>
-            <circle cx="198.5" cy="43" r="3" fill="#0015ff" opacity="0.9"/>
-            <rect x="140" y="18" width="120" height="28" rx="8" fill="rgba(0,21,255,0.15)" stroke="rgba(0,21,255,0.4)" stroke-width="1"/>
-            <text x="200" y="36" text-anchor="middle" fill="#0015ff" font-size="12" font-weight="600" font-family="Syne">Ponto do Construtor</text>
-            <rect x="0" y="280" width="400" height="20" fill="#050A14"/>
-            <rect x="290" y="160" width="60" height="140" fill="#0D1526" stroke="#1E3A5F" stroke-width="0.5"/>
-            <rect x="355" y="180" width="45" height="120" fill="#0D1526" stroke="#1E3A5F" stroke-width="0.5"/>
-            <rect x="295" y="170" width="8" height="6" rx="1" fill="#0015ff" opacity="0.5"/>
+            <circle cx="50"  cy="30" r="1.5" fill="white" opacity="0.5"/>
+            <circle cx="120" cy="20" r="1"   fill="white" opacity="0.35"/>
+            <circle cx="200" cy="35" r="1.5" fill="white" opacity="0.45"/>
+            <circle cx="310" cy="25" r="1"   fill="white" opacity="0.55"/>
+            <circle cx="370" cy="15" r="1.5" fill="white" opacity="0.35"/>
+            <rect x="0"   y="170" width="55" height="130" fill="#0D0D1A" stroke="#1E2040" stroke-width="0.5"/>
+            <rect x="60"  y="150" width="50" height="150" fill="#0D0D1A" stroke="#1E2040" stroke-width="0.5"/>
+            <rect x="8"   y="178" width="8" height="6" rx="1" fill="#9b00e8" opacity="0.7"/>
+            <rect x="20"  y="178" width="8" height="6" rx="1" fill="#4ECDC4" opacity="0.5"/>
+            <rect x="32"  y="178" width="8" height="6" rx="1" fill="#9b00e8" opacity="0.3"/>
+            <rect x="8"   y="192" width="8" height="6" rx="1" fill="#A78BFA" opacity="0.5"/>
+            <rect x="20"  y="192" width="8" height="6" rx="1" fill="#9b00e8" opacity="0.5"/>
+            <rect x="32"  y="192" width="8" height="6" rx="1" fill="#4ECDC4" opacity="0.4"/>
+            <rect x="150" y="80"  width="100" height="220" fill="#0A0A18" stroke="#1E2040" stroke-width="0.5"/>
+            <rect x="165" y="60"  width="70"  height="240" fill="#0D0D1E" stroke="#1E2040" stroke-width="0.5"/>
+            <rect x="165" y="60"  width="70"  height="240" fill="url(#buildingGrad)" opacity="0.4"/>
+            <rect x="170" y="70"  width="10" height="8" rx="1" fill="#9b00e8" opacity="0.8"/>
+            <rect x="185" y="70"  width="10" height="8" rx="1" fill="#9b00e8" opacity="0.6"/>
+            <rect x="200" y="70"  width="10" height="8" rx="1" fill="#9b00e8" opacity="0.4"/>
+            <rect x="215" y="70"  width="10" height="8" rx="1" fill="#9b00e8" opacity="0.7"/>
+            <rect x="170" y="85"  width="10" height="8" rx="1" fill="#4ECDC4" opacity="0.5"/>
+            <rect x="185" y="85"  width="10" height="8" rx="1" fill="#9b00e8" opacity="0.4"/>
+            <rect x="200" y="85"  width="10" height="8" rx="1" fill="#A78BFA" opacity="0.6"/>
+            <rect x="215" y="85"  width="10" height="8" rx="1" fill="#9b00e8" opacity="0.5"/>
+            <rect x="197" y="45"  width="3"  height="15" rx="1" fill="#9b00e8" opacity="0.8"/>
+            <circle cx="198.5" cy="43" r="3" fill="#9b00e8" opacity="0.9"/>
+            <rect x="140" y="18" width="120" height="26" rx="7" fill="rgba(155,0,232,.15)" stroke="rgba(155,0,232,.4)" stroke-width="1"/>
+            <text x="200" y="35" text-anchor="middle" fill="#9b00e8" font-size="11" font-weight="600" font-family="Inter">Ponto do Construtor</text>
+            <rect x="0" y="280" width="400" height="20" fill="#050510"/>
+            <rect x="290" y="160" width="60"  height="140" fill="#0D0D1A" stroke="#1E2040" stroke-width="0.5"/>
+            <rect x="355" y="180" width="45"  height="120" fill="#0D0D1A" stroke="#1E2040" stroke-width="0.5"/>
+            <rect x="295" y="170" width="8" height="6" rx="1" fill="#9b00e8" opacity="0.5"/>
             <rect x="310" y="170" width="8" height="6" rx="1" fill="#4ECDC4" opacity="0.4"/>
             <rect x="325" y="170" width="8" height="6" rx="1" fill="#A78BFA" opacity="0.5"/>
           </svg>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- ══════════════════════════════════════════
+       CTA
+  ══════════════════════════════════════════ -->
   <section class="section-cta" id="contato">
     <div class="cta-bg-glow"></div>
     <div class="section-container cta-inner">
       <div class="section-tag center light">Comece agora</div>
-      <h2 class="cta-title">Pronto para transformar<br>a construção civil?</h2>
-      <p class="cta-desc">Seja você um profissional buscando oportunidades ou uma empresa precisando de mão de obra — o Ponto do Construtor é para você.</p>
+      <h2 class="cta-title">
+        Pronto para transformar<br>a construção civil?
+      </h2>
+      <p class="cta-desc">
+        Seja você um profissional buscando oportunidades ou uma empresa
+        precisando de mão de obra — o Ponto do Construtor é para você.
+      </p>
       <div class="cta-buttons">
-        <a href="#!" class="btn-cta-primary" onclick="fordoar()">Cadastrar como Profissional</a>
-        <a href="#!" class="btn-cta-secondary" onclick="fordoar()">Contratar Profissionais</a>
+        <a href="#!" class="btn-cta-primary"    onclick="fordoar()">Cadastrar como Profissional</a>
+        <a href="#!" class="btn-cta-secondary"  onclick="fordoar()">Contratar Profissionais</a>
       </div>
     </div>
   </section>
 
-  <!-- SOBRE -->
+  <!-- ══════════════════════════════════════════
+       SOBRE
+  ══════════════════════════════════════════ -->
   <section class="section-sobre" id="sobre">
     <div class="section-container">
       <div class="section-tag center">Sobre</div>
-      <h2 class="section-title center">A equipe por trás<br>da <span class="text-blue">NyTech</span></h2>
-      <p class="section-desc center">O Ponto do Construtor é uma startup criada por estudantes apaixonados por resolver problemas reais.</p>
+      <h2 class="section-title center">
+        A equipe por trás da <span class="text-blue">NyTech</span>
+      </h2>
+      <p class="section-desc center">
+        O Ponto do Construtor é uma startup criada por estudantes apaixonados por resolver problemas reais.
+      </p>
 
       <div class="team-grid">
         <div class="team-card">
@@ -624,27 +684,29 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-brand">
         <div class="footer-logo">
-          <svg width="90" height="28" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="88" height="28" viewBox="0 0 200 70" fill="none">
             <defs>
               <linearGradient id="nLogoGradFt" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0%" stop-color="#29ABE2"/>
-                <stop offset="50%" stop-color="#7B2FF7"/>
-                <stop offset="100%" stop-color="#D91ECC"/>
+                <stop offset="50%" stop-color="#9b00e8"/>
+                <stop offset="100%" stop-color="#5e42ff"/>
               </linearGradient>
             </defs>
             <polyline points="8,56 8,14 36,56 36,14" stroke="url(#nLogoGradFt)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <circle cx="8" cy="56" r="4" fill="url(#nLogoGradFt)"/>
-            <circle cx="8" cy="14" r="4" fill="url(#nLogoGradFt)"/>
+            <circle cx="8"  cy="56" r="4" fill="url(#nLogoGradFt)"/>
+            <circle cx="8"  cy="14" r="4" fill="url(#nLogoGradFt)"/>
             <circle cx="36" cy="14" r="4" fill="url(#nLogoGradFt)"/>
             <circle cx="36" cy="56" r="4" fill="url(#nLogoGradFt)"/>
             <line x1="36" y1="14" x2="44" y2="6" stroke="url(#nLogoGradFt)" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="44" cy="6" r="2.5" fill="#D91ECC"/>
-            <text x="58" y="43" font-family="Syne, sans-serif" font-size="26" font-weight="700" fill="white">Nytech</text>
+            <circle cx="44" cy="6" r="2.5" fill="#5e42ff"/>
+            <text x="58" y="43" font-family="Space Grotesk, sans-serif" font-size="26" font-weight="700" fill="white">Nytech</text>
           </svg>
         </div>
         <p>Aqui Sonhos se Tornam Concretos.</p>
@@ -666,17 +728,25 @@
     </div>
 
     <div class="footer-bottom">
-      <p>© 2025 NyTech · Ponto do Construtor · Todos os direitos reservados.</p>
+      <span>© 2025 NyTech · Ponto do Construtor</span>
+      <span>Todos os direitos reservados.</span>
     </div>
   </footer>
 
   <script type="text/babel" src="js.jsx"></script>
 
   <script>
-    /* Fecha o menu mobile ao clicar em qualquer link âncora */
+    // Hamburger toggle
+    const ham = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    if (ham && menu) {
+      ham.addEventListener('click', function() {
+        menu.classList.toggle('active');
+      });
+    }
+    // Fecha ao clicar em link
     document.querySelectorAll('a[href^="#"]').forEach(function(link) {
       link.addEventListener('click', function() {
-        var menu = document.getElementById('mobileMenu');
         if (menu) menu.classList.remove('active');
       });
     });
