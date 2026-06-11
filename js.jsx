@@ -46,7 +46,7 @@ if (han && mob) {
         link.addEventListener("click", () => {
 
             mob.classList.remove("active");
-            han.classList.remove("active");
+            han.classList.remove("active"); 
 
         });
  
