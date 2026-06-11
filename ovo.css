@@ -7,6 +7,7 @@
   --violet:    #9b00e8;
   --violet-2:  #7a00bb;
   --indigo:    #5e42ff;
+  --blue-strong: #2F6BFF;
   --teal:      #4ECDC4;
   --purple:    #A78BFA;
   --green:     #22C55E;
@@ -116,7 +117,7 @@ h1, h2, h3, h4 { font-family: var(--fd); font-weight: 700; line-height: 1.1; }
 
 .btn-nav-primary {
   padding: 8px 22px; font-size: .82rem; font-weight: 600; letter-spacing: .02em;
-  color: var(--snow); background: var(--violet);
+  color: var(--snow); background: linear-gradient(120deg, var(--violet) 0%, var(--blue-strong) 100%);
   border-radius: var(--r); transition: all .25s;
   box-shadow: 0 0 20px rgba(155,0,232,.25);
 }
@@ -238,7 +239,7 @@ h1, h2, h3, h4 { font-family: var(--fd); font-weight: 700; line-height: 1.1; }
 }
 
 .btn-primary {
-  padding: 14px 30px; background: var(--violet); color: var(--snow);
+  padding: 14px 30px; background: linear-gradient(120deg, var(--violet) 0%, var(--blue-strong) 100%); color: var(--snow);
   font-family: var(--fb); font-size: .88rem; font-weight: 600;
   letter-spacing: .02em; border-radius: var(--r);
   transition: all .25s; box-shadow: 0 0 24px rgba(155,0,232,.3);
@@ -457,7 +458,7 @@ h1, h2, h3, h4 { font-family: var(--fd); font-weight: 700; line-height: 1.1; }
 .card-blue::after { color: rgba(255,255,255,.55); }
 
 .card-blue {
-  background: linear-gradient(135deg, var(--violet) 0%, #5e00b5 100%);
+  background: linear-gradient(135deg, var(--violet) 0%, var(--blue-strong) 100%);
   border: 1.5px dashed rgba(255,255,255,.35);
   box-shadow: 0 12px 48px rgba(155,0,232,.25);
   color: #fff;
@@ -623,7 +624,7 @@ h1, h2, h3, h4 { font-family: var(--fd); font-weight: 700; line-height: 1.1; }
 }
 .publico-card:hover { transform: translateY(-6px); border-color: rgba(155,0,232,.2); box-shadow: var(--shadow-l); }
 .publico-featured {
-  background: linear-gradient(145deg, var(--violet) 0%, #4b00a0 100%);
+  background: linear-gradient(145deg, var(--violet) 0%, var(--blue-strong) 100%);
   border-color: transparent; box-shadow: 0 12px 48px rgba(155,0,232,.35);
 }
 .publico-featured:hover { box-shadow: 0 20px 64px rgba(155,0,232,.5); }
@@ -727,7 +728,7 @@ h1, h2, h3, h4 { font-family: var(--fd); font-weight: 700; line-height: 1.1; }
 .cta-desc { font-size: 1rem; color: var(--silver); max-width: 500px; margin: 0 auto 40px; line-height: 1.75; }
 .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .btn-cta-primary {
-  padding: 16px 34px; background: var(--violet); color: var(--snow);
+  padding: 16px 34px; background: linear-gradient(120deg, var(--violet) 0%, var(--blue-strong) 100%); color: var(--snow);
   font-family: var(--fb); font-size: .95rem; font-weight: 600;
   letter-spacing: .015em; border-radius: var(--r);
   transition: all .25s; box-shadow: 0 0 32px rgba(155,0,232,.3);
