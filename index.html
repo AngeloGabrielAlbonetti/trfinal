@@ -2,43 +2,58 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Configurações básicas do documento: charset, viewport responsivo e título da aba -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>NyTech · Ponto do Construtor</title>
+
+    <!-- Importação do React e ReactDOM via CDN para usar componentes React na página -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel standalone: permite usar JSX diretamente no navegador sem precisar de build -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Folha de estilos principal do projeto -->
     <link rel="stylesheet" href="ovo.css">
 </head>
 
 <body>
+    <!-- Divs reservadas para renderização de componentes React (visualizações e overlays) -->
     <div id="vis"></div>
     <div id="ro"></div>
 
     <!-- ══════════════════════════════════════════
-       NAVBAR
+       NAVBAR — barra de navegação fixa no topo da página
   ══════════════════════════════════════════ -->
     <div class="navbar-container">
+
+        <!-- Logo da NyTech na navbar — clicável, leva ao topo da página -->
         <a href="#" class="navbar-logo">
             <svg width="88" height="30" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
+          <!-- Gradiente usado no logo da navbar (azul → roxo → azul escuro) -->
           <linearGradient id="nLogoGradNav" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stop-color="#29ABE2"/>
             <stop offset="50%" stop-color="#9b00e8"/>
             <stop offset="100%" stop-color="#5e42ff"/>
           </linearGradient>
         </defs>
+        <!-- Letra N do logo em formato de polilinha com pontos nas extremidades -->
         <polyline points="8,56 8,14 36,56 36,14" stroke="url(#nLogoGradNav)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         <circle cx="8"  cy="56" r="4" fill="url(#nLogoGradNav)"/>
         <circle cx="8"  cy="14" r="4" fill="url(#nLogoGradNav)"/>
         <circle cx="36" cy="14" r="4" fill="url(#nLogoGradNav)"/>
         <circle cx="36" cy="56" r="4" fill="url(#nLogoGradNav)"/>
+        <!-- Detalhe decorativo: traço diagonal saindo do N -->
         <line x1="36" y1="14" x2="44" y2="6" stroke="url(#nLogoGradNav)" stroke-width="2.5" stroke-linecap="round"/>
         <circle cx="44" cy="6" r="2.5" fill="#5e42ff"/>
+        <!-- Texto "Nytech" ao lado do símbolo -->
         <text x="58" y="43" font-family="Space Grotesk, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">Nytech</text>
       </svg>
         </a>
 
+        <!-- Links de navegação da navbar — âncoras que levam para cada seção da página -->
         <ul class="navbar-menu">
             <li><a href="#problema">O Problema</a></li>
             <li><a href="#solucao">A Solução</a></li>
@@ -48,18 +63,21 @@
             <li><a href="#sobre">Sobre</a></li>
         </ul>
 
+        <!-- Botões de ação da navbar: "Saiba mais" (outline) e "Comece agora" (destaque) -->
         <div class="nav-actions">
             <a href="#solucao" class="btn-nav-outline">Saiba mais</a>
             <a href="#contato" class="btn-nav-primary">Comece agora</a>
         </div>
 
+        <!-- Botão hamburguer da navbar — aparece no mobile para abrir/fechar o menu -->
         <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     </div>
 
-    <!-- MOBILE MENU -->
+    <!-- MENU MOBILE — menu que abre ao clicar no hamburguer em telas pequenas -->
     <div class="mobile-menu" id="mobileMenu">
+        <!-- Links de navegação repetidos para o menu mobile -->
         <ul>
             <li><a href="#problema">O Problema</a></li>
             <li><a href="#solucao">A Solução</a></li>
@@ -68,33 +86,40 @@
             <li><a href="#diferenciais">Diferenciais</a></li>
             <li><a href="#sobre">Sobre</a></li>
         </ul>
+        <!-- Botão CTA do menu mobile — chama para ação de cadastro -->
         <a href="#contato" class="btn-nav-primary mobile-cta">Comece agora</a>
     </div>
 
     <!-- ══════════════════════════════════════════
-       HERO — split: esquerda escura + blueprint / direita com mockup
+       HERO — seção principal dividida em duas colunas:
+       esquerda com headline e stats / direita com mockup do app
   ══════════════════════════════════════════ -->
     <section class="hero" id="hero">
 
-        <!-- Coluna esquerda: headline + stats -->
+        <!-- Coluna esquerda do hero: texto principal, subtítulo, botões e estatísticas -->
         <div class="hero-left">
+            <!-- Tag pequena acima do título indicando o segmento da startup -->
             <p class="hero-eyebrow">Startup · Construção Civil</p>
 
+            <!-- Título principal do hero em três linhas com estilos diferentes -->
             <h1 class="hero-title">
                 <span class="solid-line">AQUI</span>
-                <span class="accent-line">SONHOS</span>
+                <span class="accent-line">SONHOS</span>         <!-- linha em destaque/gradiente -->
                 <span class="solid-line">SE TORNAM CONCRETOS.</span>
             </h1>
 
+            <!-- Subtítulo explicando o propósito da plataforma -->
             <p class="hero-sub">
                 A plataforma que conecta <strong>pedreiros e profissionais</strong> da construção civil com clientes e construtoras que precisam deles. Rápido, seguro, confiável.
             </p>
 
+            <!-- Botões de chamada para ação do hero: descobrir e ver funcionalidades -->
             <div class="hero-ctas">
                 <a href="#solucao" class="btn-primary">Descobrir a plataforma</a>
                 <a href="#funcionalidades" class="btn-ghost">Ver funcionalidades →</a>
             </div>
 
+            <!-- Números de credibilidade: taxa de satisfação e velocidade vs RH tradicional -->
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-number">98%</span>
@@ -107,12 +132,13 @@
             </div>
         </div>
 
-        <!-- Coluna direita: app mockup flutuante -->
+        <!-- Coluna direita do hero: mockup visual do app com cards flutuantes -->
         <div class="hero-right">
             <div class="cards-stack">
 
-                <!-- Mockup principal -->
+                <!-- Mockup principal: simula uma janela de app com lista de profissionais -->
                 <div class="app-mockup">
+                    <!-- Barra de título do mockup com dots coloridos (estilo macOS) -->
                     <div class="mockup-header">
                         <div class="mockup-dot red"></div>
                         <div class="mockup-dot yellow"></div>
@@ -120,6 +146,7 @@
                         <span class="mockup-title">ponto-do-construtor · v1.0</span>
                     </div>
                     <div class="mockup-body">
+                        <!-- Barra de busca decorativa dentro do mockup -->
                         <div class="mockup-search">
                             <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
                 <circle cx="7" cy="7" r="5" stroke="#606078" stroke-width="1.5"/>
@@ -127,7 +154,9 @@
               </svg>
                             <span>Buscar profissionais...</span>
                         </div>
+                        <!-- Lista de cards de profissionais dentro do mockup -->
                         <div class="mockup-cards">
+                            <!-- Card do profissional 1: João Silva, pedreiro, disponível -->
                             <div class="pro-card">
                                 <div class="pro-avatar" style="background:#2563EB;">JS</div>
                                 <div class="pro-info">
@@ -137,6 +166,7 @@
                                 </div>
                                 <span class="pro-badge available">Disponível</span>
                             </div>
+                            <!-- Card do profissional 2: Maria Rocha, pintora, disponível -->
                             <div class="pro-card">
                                 <div class="pro-avatar" style="background:#4ECDC4;">MR</div>
                                 <div class="pro-info">
@@ -146,6 +176,7 @@
                                 </div>
                                 <span class="pro-badge available">Disponível</span>
                             </div>
+                            <!-- Card do profissional 3: Carlos Lima, eletricista, em serviço -->
                             <div class="pro-card">
                                 <div class="pro-avatar" style="background:#A78BFA;">CL</div>
                                 <div class="pro-info">
@@ -159,7 +190,7 @@
                     </div>
                 </div>
 
-                <!-- Notificações flutuantes (hidden mobile) -->
+                <!-- Notificação flutuante superior direita: aviso de novo serviço fechado (oculta no mobile) -->
                 <div class="float-card float-top-right">
                     <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
             <path d="M10 2l2.4 5h5.6l-4.5 3.3 1.7 5.2L10 12.3l-5.2 3.2 1.7-5.2L2 7h5.6L10 2z" fill="#9b00e8"/>
@@ -170,6 +201,7 @@
                     </div>
                 </div>
 
+                <!-- Notificação flutuante inferior esquerda: aviso de avaliação recebida (oculta no mobile) -->
                 <div class="float-card float-bottom-left">
                     <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
             <circle cx="10" cy="10" r="8" stroke="#22C55E" stroke-width="2"/>
@@ -184,20 +216,21 @@
             </div>
             <!-- /cards-stack -->
 
-            <!-- Número decorativo de fundo -->
+            <!-- Número decorativo de fundo "01" para dar profundidade visual ao hero -->
             <div class="hero-bg-num">01</div>
         </div>
 
     </section>
 
     <!-- ══════════════════════════════════════════
-       PROBLEMA — layout com heading lateral
+       SEÇÃO PROBLEMA — apresenta os problemas que a plataforma resolve,
+       com layout de heading lateral + cards em coluna
   ══════════════════════════════════════════ -->
     <section class="section-problema" id="problema">
         <div class="section-container">
             <div class="problema-layout">
 
-                <!-- Heading lateral fixo -->
+                <!-- Cabeçalho lateral fixo da seção: tag, título e descrição do problema -->
                 <div class="problema-heading">
                     <div class="section-tag">O Problema</div>
                     <h2 class="section-title">
@@ -209,10 +242,12 @@
                     </p>
                 </div>
 
-                <!-- Cards em coluna -->
+                <!-- Cards dos problemas: um para cada público impactado -->
                 <div class="problema-cards">
 
+                    <!-- Card azul: problema sob a perspectiva dos clientes -->
                     <div class="problema-card card-blue">
+                        <!-- Ilustração SVG decorativa representando uma pessoa/cliente -->
                         <svg class="problema-illustration" viewBox="0 0 120 100" fill="none">
               <circle cx="60" cy="30" r="18" fill="rgba(255,255,255,.2)"/>
               <circle cx="60" cy="30" r="12" fill="rgba(255,255,255,.4)"/>
@@ -227,13 +262,16 @@
                         <p>Pessoas que precisam de alguém para realizar pequenos serviços não sabem onde encontrar profissionais confiáveis.</p>
                     </div>
 
+                    <!-- Card escuro: problema sob a perspectiva das construtoras -->
                     <div class="problema-card card-dark">
+                        <!-- Ilustração SVG decorativa representando um prédio/construtora com alerta -->
                         <svg class="problema-illustration" viewBox="0 0 120 100" fill="none">
               <rect x="20" y="40" width="80" height="50" rx="4" fill="rgba(255,255,255,.05)" stroke="rgba(155,0,232,.25)" stroke-width="1.5"/>
               <rect x="30" y="50" width="15" height="15" rx="2" fill="rgba(155,0,232,.1)"/>
               <rect x="52" y="50" width="15" height="15" rx="2" fill="rgba(155,0,232,.1)"/>
               <rect x="75" y="50" width="15" height="15" rx="2" fill="rgba(155,0,232,.1)"/>
               <rect x="45" y="72" width="30" height="18" rx="2" fill="rgba(155,0,232,.1)"/>
+              <!-- Triângulo de alerta acima do prédio -->
               <path d="M60,8 L72,28 L48,28 Z" stroke="#9b00e8" stroke-width="2" fill="rgba(155,0,232,.15)"/>
               <text x="58" y="22" fill="#9b00e8" font-size="10" font-weight="bold">!</text>
             </svg>
@@ -241,8 +279,10 @@
                         <p>Empresas enfrentam enorme dificuldade para encontrar mão de obra qualificada e completar projetos no prazo.</p>
                     </div>
 
+                    <!-- Card claro: lista numerada dos 3 impactos principais do problema -->
                     <div class="problema-card card-light">
                         <div class="impacto-list">
+                            <!-- Impacto 01: problemas estruturais -->
                             <div class="impacto-item">
                                 <span class="impacto-num">01</span>
                                 <div>
@@ -250,6 +290,7 @@
                                     <p>Falta de manutenção expõe construções a riscos sérios</p>
                                 </div>
                             </div>
+                            <!-- Impacto 02: atraso nas obras -->
                             <div class="impacto-item">
                                 <span class="impacto-num">02</span>
                                 <div>
@@ -257,6 +298,7 @@
                                     <p>Projetos sem mão de obra suficiente atrasam entregas</p>
                                 </div>
                             </div>
+                            <!-- Impacto 03: prejuízo econômico -->
                             <div class="impacto-item">
                                 <span class="impacto-num">03</span>
                                 <div>
@@ -273,48 +315,54 @@
     </section>
 
     <!-- ══════════════════════════════════════════
-       SOLUÇÃO
+       SEÇÃO SOLUÇÃO — explica como a plataforma resolve o problema,
+       com visual animado de conexão e texto ao lado
   ══════════════════════════════════════════ -->
     <section class="section-solucao" id="solucao">
         <div class="section-container">
             <div class="solucao-split">
 
+                <!-- Visual SVG animado: mostra a plataforma conectando pedreiros, clientes e construtoras -->
                 <div class="solucao-visual">
                     <svg class="conexao-svg" viewBox="0 0 360 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Círculos concêntricos representando o hub central (a plataforma) -->
             <circle cx="180" cy="160" r="55" fill="#9b00e8" opacity="0.1"/>
             <circle cx="180" cy="160" r="42" fill="#9b00e8" opacity="0.16"/>
             <circle cx="180" cy="160" r="30" fill="#9b00e8"/>
+            <!-- Logo N dentro do círculo central -->
             <polyline points="172,172 172,150 188,172 188,150" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <circle cx="172" cy="172" r="2.5" fill="white" opacity="0.9"/>
             <circle cx="172" cy="150" r="2.5" fill="white" opacity="0.9"/>
             <circle cx="188" cy="150" r="2.5" fill="white" opacity="0.9"/>
             <circle cx="188" cy="172" r="2.5" fill="white" opacity="0.9"/>
+            <!-- Linhas tracejadas conectando o hub aos três grupos -->
             <line x1="180" y1="118" x2="180" y2="75"    stroke="#9b00e8" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
             <line x1="148" y1="183" x2="105" y2="252"   stroke="#9b00e8" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
             <line x1="212" y1="183" x2="255" y2="252"   stroke="#9b00e8" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
-            <!-- Pedreiros -->
+            <!-- Nó superior: Pedreiros -->
             <circle cx="180" cy="55"  r="28" fill="#12121C"/><circle cx="180" cy="55"  r="28" stroke="#9b00e8" stroke-width="1.5" opacity="0.5"/>
             <circle cx="180" cy="46"  r="8"  fill="#9b00e8" opacity="0.8"/>
             <path d="M165 68 Q180 60 195 68" stroke="#9b00e8" stroke-width="2" fill="none" stroke-linecap="round"/>
             <text x="180" y="93" text-anchor="middle" fill="#606078" font-size="11" font-family="Inter">Pedreiros</text>
-            <!-- Clientes -->
+            <!-- Nó inferior esquerdo: Clientes -->
             <circle cx="90"  cy="270" r="28" fill="#12121C"/><circle cx="90"  cy="270" r="28" stroke="#4ECDC4" stroke-width="1.5" opacity="0.5"/>
             <circle cx="90"  cy="261" r="8"  fill="#4ECDC4" opacity="0.8"/>
             <path d="M75 283 Q90 275 105 283" stroke="#4ECDC4" stroke-width="2" fill="none" stroke-linecap="round"/>
             <text x="90" y="308" text-anchor="middle" fill="#606078" font-size="11" font-family="Inter">Clientes</text>
-            <!-- Construtoras -->
+            <!-- Nó inferior direito: Construtoras -->
             <circle cx="270" cy="270" r="28" fill="#12121C"/><circle cx="270" cy="270" r="28" stroke="#A78BFA" stroke-width="1.5" opacity="0.5"/>
             <rect x="258" y="258" width="24" height="20" rx="2" fill="none" stroke="#A78BFA" stroke-width="1.5" opacity="0.8"/>
             <rect x="262" y="262" width="5" height="5" rx="1" fill="#A78BFA" opacity="0.6"/>
             <rect x="273" y="262" width="5" height="5" rx="1" fill="#A78BFA" opacity="0.6"/>
             <text x="270" y="308" text-anchor="middle" fill="#606078" font-size="11" font-family="Inter">Construtoras</text>
-            <!-- Animações -->
+            <!-- Bolinhas animadas que percorrem as linhas de conexão — mostram o fluxo de dados -->
             <circle r="4" fill="#9b00e8"><animateMotion dur="2s"   repeatCount="indefinite" path="M180,118 L180,75"/></circle>
             <circle r="4" fill="#4ECDC4"><animateMotion dur="2.5s" repeatCount="indefinite" path="M148,183 L105,252"/></circle>
             <circle r="4" fill="#A78BFA"><animateMotion dur="3s"   repeatCount="indefinite" path="M212,183 L255,252"/></circle>
           </svg>
                 </div>
 
+                <!-- Conteúdo textual da seção solução: tag, título, descrição e botão -->
                 <div class="solucao-content">
                     <div class="section-tag">A Solução</div>
                     <h2 class="section-title">
@@ -324,6 +372,7 @@
                     <p class="section-desc">
                         O <strong>Ponto do Construtor</strong> é a ponte entre pedreiros e profissionais da construção civil — e os clientes e construtoras que precisam deles. Rápido, seguro e eficiente.
                     </p>
+                    <!-- Botão que leva para a seção de funcionalidades -->
                     <a href="#funcionalidades" class="btn-primary">Ver funcionalidades</a>
                 </div>
 
@@ -332,25 +381,30 @@
     </section>
 
     <!-- ══════════════════════════════════════════
-       FUNCIONALIDADES — bento grid
+       SEÇÃO FUNCIONALIDADES — grid bento com os recursos da plataforma
   ══════════════════════════════════════════ -->
     <section class="section-features" id="funcionalidades">
         <div class="section-container">
+            <!-- Tag e título centralizados da seção -->
             <div class="section-tag center">Funcionalidades</div>
             <h2 class="section-title center">Tudo que você precisa,<br><em>em um só lugar</em></h2>
 
+            <!-- Grid bento: mistura cards grandes, normais e largos -->
             <div class="features-grid">
 
-                <!-- Card grande (span 2 linhas) -->
+                <!-- Card grande (ocupa 2 linhas no grid): funcionalidade de Cadastro Rápido -->
                 <div class="feature-card feature-large">
+                    <!-- Ilustração SVG decorativa do card de cadastro -->
                     <svg class="feature-svg" viewBox="0 0 200 150" fill="none">
             <rect x="30" y="20" width="140" height="110" rx="12" fill="rgba(155,0,232,.06)" stroke="rgba(155,0,232,.2)" stroke-width="1.5"/>
             <circle cx="100" cy="55" r="20" fill="rgba(155,0,232,.12)"/>
             <circle cx="100" cy="55" r="14" fill="#9b00e8" opacity="0.7"/>
+            <!-- Ícone de check dentro do círculo -->
             <path d="M93 55l5 5 9-9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <rect x="50" y="87" width="100" height="8" rx="4" fill="rgba(155,0,232,.15)"/>
             <rect x="65" y="103" width="70" height="8" rx="4" fill="rgba(155,0,232,.08)"/>
           </svg>
+                    <!-- Ícone azul de pessoa/usuário -->
                     <div class="feature-icon blue">
                         <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M11 2C6 2 2 6 2 11s4 9 9 9 9-4 9-9-4-9-9-9zm0 4a3 3 0 110 6 3 3 0 010-6zm0 10a7 7 0 01-5.4-2.5C6.4 12 8.6 11 11 11s4.6 1 5.4 2.5A7 7 0 0111 16z" fill="currentColor"/></svg>
                     </div>
@@ -358,8 +412,9 @@
                     <p>Registro simples para pedreiros e contratantes. Crie seu perfil em minutos e comece a trabalhar ou contratar imediatamente.</p>
                 </div>
 
-                <!-- Card normal 1 -->
+                <!-- Card normal 1: funcionalidade de Feed de Profissionais -->
                 <div class="feature-card">
+                    <!-- Ilustração SVG de lista/feed com dois itens -->
                     <svg class="feature-svg small" viewBox="0 0 200 120" fill="none">
             <rect x="20" y="15" width="160" height="35" rx="8" fill="rgba(78,205,196,.1)" stroke="rgba(78,205,196,.2)"/>
             <circle cx="40" cy="32" r="10" fill="rgba(78,205,196,.3)"/>
@@ -370,6 +425,7 @@
             <rect x="56" y="67" width="70" height="6" rx="3" fill="rgba(78,205,196,.15)"/>
             <rect x="56" y="77" width="45" height="5" rx="2" fill="rgba(78,205,196,.1)"/>
           </svg>
+                    <!-- Ícone teal de lista -->
                     <div class="feature-icon teal">
                         <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><rect x="2" y="3" width="18" height="4" rx="2" fill="currentColor"/><rect x="2" y="9" width="18" height="4" rx="2" fill="currentColor" opacity=".7"/><rect x="2" y="15" width="18" height="4" rx="2" fill="currentColor" opacity=".4"/></svg>
                     </div>
@@ -377,8 +433,9 @@
                     <p>Listagem de profissionais disponíveis com foto, especialidade e avaliações.</p>
                 </div>
 
-                <!-- Card normal 2 -->
+                <!-- Card normal 2: funcionalidade de Chat Direto -->
                 <div class="feature-card">
+                    <!-- Ilustração SVG de duas bolhas de conversa (chat) -->
                     <svg class="feature-svg small" viewBox="0 0 200 120" fill="none">
             <rect x="15" y="20" width="110" height="35" rx="10" fill="rgba(167,139,250,.12)" stroke="rgba(167,139,250,.25)"/>
             <rect x="25" y="30" width="70" height="6" rx="3" fill="rgba(167,139,250,.4)"/>
@@ -387,6 +444,7 @@
             <rect x="85" y="75" width="65" height="6" rx="3" fill="rgba(155,0,232,.4)"/>
             <rect x="85" y="85" width="45" height="5" rx="2" fill="rgba(155,0,232,.2)"/>
           </svg>
+                    <!-- Ícone roxo de balão de chat -->
                     <div class="feature-icon purple">
                         <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M20 2H4a2 2 0 00-2 2v12a2 2 0 002 2h14l4 4V4a2 2 0 00-2-2z" fill="currentColor"/></svg>
                     </div>
@@ -394,17 +452,19 @@
                     <p>Comunicação direta entre profissionais e contratantes para fechar contratos sem burocracia.</p>
                 </div>
 
-                <!-- Card largo (span 2 colunas) -->
+                <!-- Card largo (ocupa 2 colunas no grid): funcionalidade de Sistema de Avaliação -->
                 <div class="feature-card feature-wide">
+                    <!-- Ilustração SVG de estrelas de avaliação (4 cheias + 1 vazia) -->
                     <svg class="feature-svg small" viewBox="0 0 280 100" fill="none">
             <text x="20"  y="55" font-size="28" fill="#9b00e8">★</text>
             <text x="62"  y="55" font-size="28" fill="#9b00e8">★</text>
             <text x="104" y="55" font-size="28" fill="#9b00e8">★</text>
             <text x="146" y="55" font-size="28" fill="#9b00e8">★</text>
-            <text x="188" y="55" font-size="28" fill="rgba(155,0,232,.25)">★</text>
+            <text x="188" y="55" font-size="28" fill="rgba(155,0,232,.25)">★</text>  <!-- estrela vazia -->
             <rect x="20" y="66" width="180" height="7" rx="3" fill="rgba(155,0,232,.12)"/>
             <rect x="20" y="79" width="120" height="5" rx="2" fill="rgba(155,0,232,.07)"/>
           </svg>
+                    <!-- Ícone azul de estrela -->
                     <div class="feature-icon blue">
                         <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 4.8 21l1.2-6.8-5-4.9 6.9-1L12 2z" fill="currentColor"/></svg>
                     </div>
@@ -417,7 +477,8 @@
     </section>
 
     <!-- ══════════════════════════════════════════
-       DIFERENCIAIS
+       SEÇÃO DIFERENCIAIS — tabela comparativa entre
+       LinkedIn, RH Tradicional e o Ponto do Construtor
   ══════════════════════════════════════════ -->
     <section class="section-diff" id="diferenciais">
         <div class="section-container">
@@ -426,6 +487,7 @@
                 Por que o <span class="text-blue">Ponto do Construtor</span><br>é diferente?
             </h2>
 
+            <!-- Wrapper com scroll horizontal para a tabela em telas pequenas -->
             <div class="diff-table-wrapper">
                 <table class="diff-table">
                     <thead>
@@ -433,28 +495,33 @@
                             <th class="th-feature">Funcionalidade</th>
                             <th>LinkedIn</th>
                             <th>RH Tradicional</th>
+                            <!-- Coluna destacada: Ponto do Construtor -->
                             <th class="th-highlight">Ponto do Construtor</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- Linha 1: Foco em construção civil -->
                         <tr>
                             <td>Foco em construção civil</td>
                             <td class="no">✗</td>
                             <td class="partial">Parcial</td>
                             <td class="yes highlight-col">✔ Sim</td>
                         </tr>
+                        <!-- Linha 2: Rapidez na contratação -->
                         <tr>
                             <td>Rapidez na contratação</td>
                             <td class="no">✗</td>
                             <td class="no">✗</td>
                             <td class="yes highlight-col">✔ Sim</td>
                         </tr>
+                        <!-- Linha 3: Avaliação do profissional -->
                         <tr>
                             <td>Avaliação do profissional</td>
                             <td class="no">✗</td>
                             <td class="no">✗</td>
                             <td class="yes highlight-col">✔ Sim</td>
                         </tr>
+                        <!-- Linha 4: 100% para pedreiros -->
                         <tr>
                             <td>100% para pedreiros</td>
                             <td class="no">✗</td>
@@ -468,7 +535,8 @@
     </section>
 
     <!-- ══════════════════════════════════════════
-       PÚBLICO-ALVO
+       SEÇÃO PÚBLICO-ALVO — cards em formato de crachá
+       para cada tipo de usuário da plataforma
   ══════════════════════════════════════════ -->
     <section class="section-publico" id="publico">
         <div class="section-container">
@@ -477,12 +545,15 @@
                 Para quem é<br><em>o Ponto do Construtor?</em>
             </h2>
 
+            <!-- Grid com os 3 cards de público-alvo em estilo crachá -->
             <div class="publico-grid">
 
+                <!-- Crachá 01: Pedreiros e Profissionais autônomos -->
                 <div class="publico-card">
-                    <div class="badge-clip"></div>
-                    <span class="badge-stamp">DISPONÍVEL</span>
+                    <div class="badge-clip"></div>                          <!-- clip decorativo do crachá -->
+                    <span class="badge-stamp">DISPONÍVEL</span>            <!-- carimbo de status -->
                     <div class="publico-number">01</div>
+                    <!-- Ícone SVG de pessoa com fundo roxo -->
                     <svg class="publico-svg" viewBox="0 0 80 80" fill="none">
             <circle cx="40" cy="40" r="36" fill="rgba(155,0,232,.08)"/>
             <circle cx="40" cy="28" r="14" fill="rgba(155,0,232,.25)"/>
@@ -491,16 +562,19 @@
           </svg>
                     <h3>Pedreiros & Profissionais</h3>
                     <p>Autônomos que buscam visibilidade e mais oportunidades de trabalho na região.</p>
+                    <!-- Rodapé do crachá com código de barras decorativo e ID -->
                     <div class="badge-footer">
                         <div class="badge-barcode"></div>
                         <span class="badge-id">CRACHÁ Nº 01 · PROFISSIONAL</span>
                     </div>
                 </div>
 
+                <!-- Crachá 02: Clientes Finais — card em destaque (featured) -->
                 <div class="publico-card publico-featured">
                     <div class="badge-clip"></div>
                     <span class="badge-stamp">PRIORIDADE</span>
                     <div class="publico-number">02</div>
+                    <!-- Ícone SVG de pessoa com check -->
                     <svg class="publico-svg" viewBox="0 0 80 80" fill="none">
             <circle cx="40" cy="40" r="36" fill="rgba(255,255,255,.1)"/>
             <circle cx="40" cy="28" r="14" fill="rgba(255,255,255,.3)"/>
@@ -515,10 +589,12 @@
                     </div>
                 </div>
 
+                <!-- Crachá 03: Construtoras parceiras -->
                 <div class="publico-card">
                     <div class="badge-clip"></div>
                     <span class="badge-stamp">PARCEIRO</span>
                     <div class="publico-number">03</div>
+                    <!-- Ícone SVG de prédio/construtora com fundo teal -->
                     <svg class="publico-svg" viewBox="0 0 80 80" fill="none">
             <circle cx="40" cy="40" r="36" fill="rgba(78,205,196,.08)"/>
             <rect x="22" y="30" width="36" height="32" rx="4" fill="none" stroke="rgba(78,205,196,.5)" stroke-width="2"/>
@@ -540,12 +616,14 @@
     </section>
 
     <!-- ══════════════════════════════════════════
-       MERCADO
+       SEÇÃO MERCADO — potencial de escala da plataforma,
+       layout dividido: texto à esquerda + SVG de cidade à direita
   ══════════════════════════════════════════ -->
     <section class="section-mercado">
         <div class="section-container">
             <div class="mercado-split">
 
+                <!-- Lado esquerdo: texto sobre o potencial de mercado -->
                 <div class="mercado-content">
                     <div class="section-tag">Potencial de Mercado</div>
                     <h2 class="section-title">
@@ -555,7 +633,9 @@
                         Quanto maior o centro urbano, maior o problema — e maior a oportunidade. O Ponto do Construtor foi desenhado para crescer com as cidades.
                     </p>
 
+                    <!-- Dois pontos de destaque sobre o potencial de mercado -->
                     <div class="mercado-pontos">
+                        <!-- Ponto 1: escala urbana -->
                         <div class="mercado-ponto">
                             <div class="ponto-icon">🏗️</div>
                             <div>
@@ -563,6 +643,7 @@
                                 <p>O problema se agrava em centros urbanos densos, onde a demanda por serviços é altíssima.</p>
                             </div>
                         </div>
+                        <!-- Ponto 2: alta escalabilidade da plataforma -->
                         <div class="mercado-ponto">
                             <div class="ponto-icon">📈</div>
                             <div>
@@ -573,23 +654,29 @@
                     </div>
                 </div>
 
+                <!-- Lado direito: ilustração SVG de skyline de cidade iluminada -->
                 <div class="mercado-visual">
                     <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="city-svg">
             <defs>
+              <!-- Gradiente do céu da cidade (escuro para mais escuro) -->
               <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="#0A0A12"/><stop offset="100%" stop-color="#12121E"/>
               </linearGradient>
+              <!-- Gradiente roxo dos prédios do centro -->
               <linearGradient id="buildingGrad" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="#9b00e8" stop-opacity="0.35"/>
                 <stop offset="100%" stop-color="#9b00e8" stop-opacity="0.08"/>
               </linearGradient>
             </defs>
+            <!-- Fundo do céu -->
             <rect width="400" height="300" fill="url(#skyGrad)" rx="16"/>
+            <!-- Estrelas decorativas no céu -->
             <circle cx="50"  cy="30" r="1.5" fill="white" opacity="0.5"/>
             <circle cx="120" cy="20" r="1"   fill="white" opacity="0.35"/>
             <circle cx="200" cy="35" r="1.5" fill="white" opacity="0.45"/>
             <circle cx="310" cy="25" r="1"   fill="white" opacity="0.55"/>
             <circle cx="370" cy="15" r="1.5" fill="white" opacity="0.35"/>
+            <!-- Prédios da esquerda com janelas iluminadas -->
             <rect x="0"   y="170" width="55" height="130" fill="#0D0D1A" stroke="#1E2040" stroke-width="0.5"/>
             <rect x="60"  y="150" width="50" height="150" fill="#0D0D1A" stroke="#1E2040" stroke-width="0.5"/>
             <rect x="8"   y="178" width="8" height="6" rx="1" fill="#9b00e8" opacity="0.7"/>
@@ -598,9 +685,11 @@
             <rect x="8"   y="192" width="8" height="6" rx="1" fill="#A78BFA" opacity="0.5"/>
             <rect x="20"  y="192" width="8" height="6" rx="1" fill="#9b00e8" opacity="0.5"/>
             <rect x="32"  y="192" width="8" height="6" rx="1" fill="#4ECDC4" opacity="0.4"/>
+            <!-- Prédio principal do centro (mais alto, com gradiente roxo) -->
             <rect x="150" y="80"  width="100" height="220" fill="#0A0A18" stroke="#1E2040" stroke-width="0.5"/>
             <rect x="165" y="60"  width="70"  height="240" fill="#0D0D1E" stroke="#1E2040" stroke-width="0.5"/>
             <rect x="165" y="60"  width="70"  height="240" fill="url(#buildingGrad)" opacity="0.4"/>
+            <!-- Janelas iluminadas do prédio central (2 fileiras) -->
             <rect x="170" y="70"  width="10" height="8" rx="1" fill="#9b00e8" opacity="0.8"/>
             <rect x="185" y="70"  width="10" height="8" rx="1" fill="#9b00e8" opacity="0.6"/>
             <rect x="200" y="70"  width="10" height="8" rx="1" fill="#9b00e8" opacity="0.4"/>
@@ -609,11 +698,15 @@
             <rect x="185" y="85"  width="10" height="8" rx="1" fill="#9b00e8" opacity="0.4"/>
             <rect x="200" y="85"  width="10" height="8" rx="1" fill="#A78BFA" opacity="0.6"/>
             <rect x="215" y="85"  width="10" height="8" rx="1" fill="#9b00e8" opacity="0.5"/>
+            <!-- Antena no topo do prédio central com luz -->
             <rect x="197" y="45"  width="3"  height="15" rx="1" fill="#9b00e8" opacity="0.8"/>
             <circle cx="198.5" cy="43" r="3" fill="#9b00e8" opacity="0.9"/>
+            <!-- Label "Ponto do Construtor" flutuando sobre o prédio central -->
             <rect x="140" y="18" width="120" height="26" rx="7" fill="rgba(155,0,232,.15)" stroke="rgba(155,0,232,.4)" stroke-width="1"/>
             <text x="200" y="35" text-anchor="middle" fill="#9b00e8" font-size="11" font-weight="600" font-family="Inter">Ponto do Construtor</text>
+            <!-- Faixa escura no rodapé da cidade (chão) -->
             <rect x="0" y="280" width="400" height="20" fill="#050510"/>
+            <!-- Prédios da direita -->
             <rect x="290" y="160" width="60"  height="140" fill="#0D0D1A" stroke="#1E2040" stroke-width="0.5"/>
             <rect x="355" y="180" width="45"  height="120" fill="#0D0D1A" stroke="#1E2040" stroke-width="0.5"/>
             <rect x="295" y="170" width="8" height="6" rx="1" fill="#9b00e8" opacity="0.5"/>
@@ -627,9 +720,11 @@
     </section>
 
     <!-- ══════════════════════════════════════════
-       CTA
+       SEÇÃO CTA (Call to Action) — seção final de conversão
+       com dois botões: cadastrar como profissional ou contratar
   ══════════════════════════════════════════ -->
     <section class="section-cta" id="contato">
+        <!-- Elemento de brilho/glow decorativo atrás do conteúdo do CTA -->
         <div class="cta-bg-glow"></div>
         <div class="section-container cta-inner">
             <div class="section-tag center light">Comece agora</div>
@@ -639,15 +734,19 @@
             <p class="cta-desc">
                 Seja você um profissional buscando oportunidades ou uma empresa precisando de mão de obra — o Ponto do Construtor é para você.
             </p>
+            <!-- Botões do CTA: ambos chamam a função fordoar() ao clicar -->
             <div class="cta-buttons">
+                <!-- Botão primário: fluxo de cadastro como profissional -->
                 <a href="#!" class="btn-cta-primary" onclick="fordoar()">Cadastrar como Profissional</a>
+                <!-- Botão secundário: fluxo de contratar profissionais -->
                 <a href="#!" class="btn-cta-secondary" onclick="fordoar()">Contratar Profissionais</a>
             </div>
         </div>
     </section>
 
     <!-- ══════════════════════════════════════════
-       SOBRE
+       SEÇÃO SOBRE — apresenta a equipe da startup NyTech
+       com foto, nome e RA de cada integrante
   ══════════════════════════════════════════ -->
     <section class="section-sobre" id="sobre">
         <div class="section-container">
@@ -659,32 +758,39 @@
                 O Ponto do Construtor é uma startup criada por estudantes apaixonados por resolver problemas reais.
             </p>
 
+            <!-- Grid de cards com foto, nome e RA de cada membro da equipe -->
             <div class="team-grid">
+                <!-- Card: Angelo Gabriel Albonetti -->
                 <div class="team-card">
                     <div class="team-avatar"><img src="Equipe/Angelo.jpg" alt="Angelo"></div>
                     <span class="team-name">Angelo Gabriel Albonetti</span>
                     <span class="team-ra">R.A: 25054348-2</span>
                 </div>
+                <!-- Card: Daniel Souza -->
                 <div class="team-card">
                     <div class="team-avatar"><img src="Equipe/Daniel.jpg" alt="Daniel"></div>
                     <span class="team-name">Daniel Souza</span>
                     <span class="team-ra">R.A: 25009501-2</span>
                 </div>
+                <!-- Card: Felipe Araújo Souza -->
                 <div class="team-card">
                     <div class="team-avatar"><img src="Equipe/FelipeA.jpg" alt="Felipe-Araujo"></div>
                     <span class="team-name">Felipe Araújo Souza</span>
                     <span class="team-ra">R.A: 25001112-2</span>
                 </div>
+                <!-- Card: Felipe Rabassi Nascimento -->
                 <div class="team-card">
                     <div class="team-avatar"><img src="Equipe/FelipeR.jpg" alt="Felipe-Rabassi"></div>
                     <span class="team-name">Felipe Rabassi Nascimento</span>
                     <span class="team-ra">R.A: 25185870-2</span>
                 </div>
+                <!-- Card: João Pedro Marroni Zoli -->
                 <div class="team-card">
                     <div class="team-avatar"><img src="Equipe/Zoli.jpg" alt="João-Pedro"></div>
                     <span class="team-name">João Pedro Marroni Zoli</span>
                     <span class="team-ra">R.A: 25000625-2</span>
                 </div>
+                <!-- Card: Lênon Cazatti Belotti -->
                 <div class="team-card">
                     <div class="team-avatar"><img src="Equipe/Lênon.jpg" alt="Lênon"></div>
                     <span class="team-name">Lênon Cazatti Belotti</span>
@@ -695,12 +801,15 @@
     </section>
 
     <!-- ══════════════════════════════════════════
-       FOOTER
+       FOOTER — rodapé com logo, links rápidos e copyright
   ══════════════════════════════════════════ -->
     <footer class="footer">
         <div class="footer-container">
+
+            <!-- Área da marca no footer: logo + slogan -->
             <div class="footer-brand">
                 <div class="footer-logo">
+                    <!-- Logo SVG repetido do footer (versão branca) -->
                     <svg width="88" height="28" viewBox="0 0 200 70" fill="none">
             <defs>
               <linearGradient id="nLogoGradFt" x1="0" y1="0" x2="1" y2="1">
@@ -722,13 +831,16 @@
                 <p>Aqui Sonhos se Tornam Concretos.</p>
             </div>
 
+            <!-- Links rápidos do footer divididos em duas colunas -->
             <div class="footer-links">
+                <!-- Coluna Produto: links das seções de funcionalidades -->
                 <div class="footer-col">
                     <h4>Produto</h4>
                     <a href="#funcionalidades">Funcionalidades</a>
                     <a href="#diferenciais">Diferenciais</a>
                     <a href="#publico">Público-Alvo</a>
                 </div>
+                <!-- Coluna Empresa: sobre e contato -->
                 <div class="footer-col">
                     <h4>Empresa</h4>
                     <a href="#sobre">Sobre a NyTech</a>
@@ -737,12 +849,14 @@
             </div>
         </div>
 
+        <!-- Barra inferior do footer com copyright -->
         <div class="footer-bottom">
             <span>© 2025 NyTech · Ponto do Construtor</span>
             <span>Todos os direitos reservados.</span>
         </div>
     </footer>
 
+    <!-- Importação do arquivo JSX externo onde ficam os componentes React da página -->
     <script type="text/babel" src="js.jsx"></script>
 </body>
 
