@@ -1,15 +1,3 @@
-const visEl = document.getElementById("vis");
-const root = ReactDOM.createRoot(visEl);
-
-let vi = Number(localStorage.getItem("acessos")) || 40;
-vi++;
-localStorage.setItem("acessos", vi);
-
-root.render(
-    <h1>Teve {vi} acessos</h1>
-);
-
-
 const roEl = document.getElementById("ro");
 const roove = ReactDOM.createRoot(roEl);
 
